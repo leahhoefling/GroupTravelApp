@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import ApiManager from "../API/ApiManager";
+import $ from 'jquery';
+
 
 export default class Login extends Component {
   constructor(props) {
@@ -32,45 +34,46 @@ export default class Login extends Component {
           this.setState({ userId: user[0].id });
         } else {
           alert(
-            "We're Sorry, it looks like you may have mistyped your email address or password."
+            "Oops! You may have typed in the wrong email or password. Click 'OK' to try again."
           );
+          this.props.history.push("/login");
         }
       })
-      .then(() => {
-        const checkbox = document.getElementById("checkbox");
-        console.log(checkbox);
-        if (checkbox.checked) {
-          if (this.state.userId) {
-            localStorage.setItem(
-              "credentials",
-              JSON.stringify({
-                email: this.state.email,
-                password: this.state.password,
-                userId: this.state.userId
-              })
-            );
-          }
-        } else {
-          if (this.state.userId) {
-            sessionStorage.setItem(
-              "credentials",
-              JSON.stringify({
-                email: this.state.email,
-                password: this.state.password,
-                userId: this.state.userId
-              })
-            );
-          }
-        }
-      });
+    // .then(() => {
+    //   const checkbox = document.getElementById("checkbox");
+    //   console.log(checkbox);
+    //   if (checkbox.checked) {
+    //     if (this.state.userId) {
+    //       localStorage.setItem(
+    //         "credentials",
+    //         JSON.stringify({
+    //           email: this.state.email,
+    //           password: this.state.password,
+    //           userId: this.state.userId
+    //         })
+    //       );
+    //     }
+    //   } else {
+    //     if (this.state.userId) {
+    //       sessionStorage.setItem(
+    //         "credentials",
+    //         JSON.stringify({
+    //           email: this.state.email,
+    //           password: this.state.password,
+    //           userId: this.state.userId
+    //         })
+    //       );
+    //     }
+    //   }
+    // });
 
-    // localStorage.setItem(
-    //   "credentials",
-    //   JSON.stringify({
-    //     email: this.state.email,
-    //     password: this.state.password
-    //   })
-    // )
+    localStorage.setItem(
+      "credentials",
+      JSON.stringify({
+        email: this.state.email,
+        password: this.state.password
+      })
+    )
     this.props.history.push("/home");
 
   };
