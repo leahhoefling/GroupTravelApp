@@ -7,4 +7,37 @@
     margin: 0 auto;
     max-width: 320px;
   }
+
+  .Register {
+    padding: 60px 0;
+  }
+
+  .Register form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+#welcomeButtons {
+  margin: auto;
+  width: 50%;
+  padding: 4%;
+}
+
+#loginWelcome {
+  margin: 0 20% 20% 0;
+}
+
+#registerWelcome {
+  margin: 0 20% 20% 0;
+}
+
+#welcomeLogo {
+  margin: auto;
+  width: 100%;
+  align-content: center;
+}
+
+#checkbox {
+  margin: 5pt;
 }

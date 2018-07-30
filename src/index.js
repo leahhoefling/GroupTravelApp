@@ -12,7 +12,7 @@ ReactDOM.render(
   <Router>
     <GroupTravelApp />
   </Router>,
-  document.querySelector("#root")
+  document.getElementById("root")
 );
 
 // ReactDOM.render(<App />, document.getElementById("root"));
