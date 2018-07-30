@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
+import ApiManager from "../API/ApiManager";
 
 export default class Login extends Component {
   constructor(props) {
@@ -8,7 +9,6 @@ export default class Login extends Component {
     //this is where I'm storing the input that the user inputs into the form
     this.state = {
       email: "",
-      name: "",
       password: ""
     };
   }
@@ -25,6 +25,54 @@ export default class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
+    ApiManager.getAll(`users?email=${this.state.email}`)
+      .then(user => {
+        if (user.length > 0 && this.state.password == user[0].password) {
+          this.setState({ userId: user[0].id });
+        } else {
+          alert(
+            "We're Sorry, it looks like you may have mistyped your email address or password."
+          );
+        }
+      })
+      .then(() => {
+        const checkbox = document.getElementById("checkbox");
+        console.log(checkbox);
+        if (checkbox.checked) {
+          if (this.state.userId) {
+            localStorage.setItem(
+              "credentials",
+              JSON.stringify({
+                email: this.state.email,
+                password: this.state.password,
+                userId: this.state.userId
+              })
+            );
+          }
+        } else {
+          if (this.state.userId) {
+            sessionStorage.setItem(
+              "credentials",
+              JSON.stringify({
+                email: this.state.email,
+                password: this.state.password,
+                userId: this.state.userId
+              })
+            );
+          }
+        }
+      });
+
+    // localStorage.setItem(
+    //   "credentials",
+    //   JSON.stringify({
+    //     email: this.state.email,
+    //     password: this.state.password
+    //   })
+    // )
+    this.props.history.push("/home");
+
   };
 
   render() {
@@ -42,14 +90,6 @@ export default class Login extends Component {
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup controlId="name" bsSize="large">
-            <ControlLabel>Name</ControlLabel>
-            <FormControl
-              value={this.state.name}
-              onChange={this.handleChange}
-              type="text"
-            />
-          </FormGroup>
           <FormGroup controlId="password" bsSize="large">
             <ControlLabel>Password</ControlLabel>
             <FormControl
@@ -58,6 +98,12 @@ export default class Login extends Component {
               type="password"
             />
           </FormGroup>
+          <div>
+
+            <label>Remember Me</label>
+            <input type="checkbox" id="checkbox" />
+          </div>
+
           <Button
             block
             bsSize="large"

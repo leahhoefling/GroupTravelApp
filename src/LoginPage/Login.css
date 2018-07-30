@@ -7,6 +7,15 @@
     margin: 0 auto;
     max-width: 320px;
   }
+
+  .Register {
+    padding: 60px 0;
+  }
+
+  .Register form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
 }
 
 #welcomeButtons {
@@ -27,4 +36,8 @@
   margin: auto;
   width: 100%;
   align-content: center;
+}
+
+#checkbox {
+  margin: 5pt;
 }

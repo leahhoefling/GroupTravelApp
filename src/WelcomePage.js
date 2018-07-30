@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, PageHeader, Button } from "react-bootstrap";
+import { Col, Image, PageHeader, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default props => {
