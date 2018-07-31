@@ -12,7 +12,6 @@ export default class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      userId: ""
     };
   }
   //this is just making sure the fields aren't empty. I can also add further requirements if I want to
@@ -26,19 +25,30 @@ export default class Login extends Component {
     });
   };
 
+
   handleSubmit = event => {
     event.preventDefault();
 
     ApiManager.getAll(`users?email=${this.state.email}`)
       .then(user => {
         if (user.length > 0 && this.state.password == user[0].password) {
-          this.setState({ userId: user[0].id });
+          localStorage.setItem(
+            "credentials",
+            JSON.stringify({
+              email: this.state.email,
+              password: this.state.password,
+              user: user[0].id
+
+            })
+          )
+          this.props.history.push("/home");
         } else {
           alert(
             "Oops! You may have typed in the wrong email or password. Click 'OK' to try again."
           );
           this.props.history.push("/login");
         }
+
       })
     // .then(() => {
     //   const checkbox = document.getElementById("checkbox");
@@ -67,17 +77,6 @@ export default class Login extends Component {
     //     }
     //   }
     // });
-
-    localStorage.setItem(
-      "credentials",
-      JSON.stringify({
-        email: this.state.email,
-        password: this.state.password,
-        user: this.state.usersId
-      })
-    )
-    this.props.history.push("/home");
-
   };
 
   render() {

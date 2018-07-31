@@ -28,6 +28,8 @@ const ApiManager = Object.create(
         },
         postItem: {
             value: (collectionName, theObject) => {
+                console.log("object", theObject);
+
                 return fetch(`http://localhost:5002/${collectionName}`, {
                     method: "POST",
                     headers: {
