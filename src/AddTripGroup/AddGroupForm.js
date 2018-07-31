@@ -28,9 +28,9 @@ export default class AddGroupTrip extends Component {
         let signedInUser = JSON.parse(localStorage.getItem("credentials"));
         if (signedInUser === null) {
             signedInUser = JSON.parse(sessionStorage.getItem("credentials"));
-            signedInUser = signedInUser.userId;
+            signedInUser = signedInUser.user;
         } else {
-            signedInUser = signedInUser.userId;
+            signedInUser = signedInUser.user;
         }
 
         let newGroup = {

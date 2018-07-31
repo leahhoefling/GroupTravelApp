@@ -17,11 +17,6 @@
       "email": "harpergwin@gmail.com",
       "password": "pass",
       "id": 3
-    },
-    {
-      "name": "Obama's- Private Island Trip",
-      "date": "2018-07-28",
-      "id": 4
     }
   ],
   "groups": [
@@ -44,6 +39,12 @@
       "name": "leahs california trip",
       "date": "2018-07-28",
       "id": 4
+    },
+    {
+      "name": "drake-dance",
+      "date": "2018-07-21",
+      "userId": 1,
+      "id": 5
     }
   ]
 }
