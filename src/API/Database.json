@@ -19,28 +19,31 @@
       "id": 3
     },
     {
-      "name": "coffee",
-      "email": "coffee@coffee.com",
-      "password": "pass",
+      "name": "Obama's- Private Island Trip",
+      "date": "2018-07-28",
       "id": 4
+    }
+  ],
+  "groups": [
+    {
+      "name": "Davis Family- Colorado",
+      "date": "07/28/2018",
+      "id": 1
     },
     {
-      "name": "friend",
-      "email": "friend@friend.com",
-      "password": "pass",
-      "id": 5
+      "name": "Obama's- Private Island Trip",
+      "date": "2018-07-27",
+      "id": 2
     },
     {
-      "name": "traveler",
-      "email": "traveler@travel.com",
-      "password": "pass",
-      "id": 6
+      "name": "hello",
+      "date": "2018-07-27",
+      "id": 3
     },
     {
-      "name": "harp",
-      "email": "harp@herpes.com",
-      "password": "iloveball",
-      "id": 7
+      "name": "leahs california trip",
+      "date": "2018-07-28",
+      "id": 4
     }
   ]
 }
