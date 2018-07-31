@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Col } from "react-bootstrap";
+import { Image, Col, Button } from "react-bootstrap";
 
 
 export default props => {
@@ -17,6 +17,11 @@ export default props => {
             <h1>
                 Welcome to the Home Page!
         </h1>
+            <div id=
+                "CTA">
+                <h3>Where is your group off to?</h3>
+                <Button bsSize="large">Start New Group Trip</Button>
+            </div>
         </React.Fragment>
     )
 };

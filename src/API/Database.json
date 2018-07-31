@@ -31,20 +31,17 @@
       "id": 2
     },
     {
-      "name": "hello",
-      "date": "2018-07-27",
-      "id": 3
-    },
-    {
-      "name": "leahs california trip",
-      "date": "2018-07-28",
-      "id": 4
-    },
-    {
-      "name": "drake-dance",
-      "date": "2018-07-21",
+      "name": "William's bermuda triangle trip",
+      "date": "2018-08-24",
       "userId": 1,
-      "id": 5
+      "id": 6
+    },
+    {
+      "name": "Cohort 26 - Disney",
+      "startDate": "2018-07-28",
+      "endDate": "2018-09-14",
+      "userId": 1,
+      "id": 7
     }
   ]
 }
