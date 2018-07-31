@@ -11,7 +11,8 @@ export default class Login extends Component {
     //this is where I'm storing the input that the user inputs into the form
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      userId: ""
     };
   }
   //this is just making sure the fields aren't empty. I can also add further requirements if I want to
@@ -71,7 +72,8 @@ export default class Login extends Component {
       "credentials",
       JSON.stringify({
         email: this.state.email,
-        password: this.state.password
+        password: this.state.password,
+        user: this.state.usersId
       })
     )
     this.props.history.push("/home");
