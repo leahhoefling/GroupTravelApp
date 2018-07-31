@@ -35,6 +35,12 @@
       "email": "traveler@travel.com",
       "password": "pass",
       "id": 6
+    },
+    {
+      "name": "harp",
+      "email": "harp@herpes.com",
+      "password": "iloveball",
+      "id": 7
     }
   ]
 }
