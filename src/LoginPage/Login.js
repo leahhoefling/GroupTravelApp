@@ -38,7 +38,6 @@ export default class Login extends Component {
               email: this.state.email,
               password: this.state.password,
               user: user[0].id
-
             })
           )
           this.props.history.push("/home");

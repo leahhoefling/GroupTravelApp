@@ -35,12 +35,14 @@ export default class AddGroupTrip extends Component {
         } else {
             signedInUser = signedInUser.user;
         }
+        console.log("signed user", signedInUser);
+
 
         let newGroup = {
             name: this.state.name,
             startDate: this.state.startDate,
             endDate: this.state.endDate,
-            userId: signedInUser
+            userId: ApiManager.getIdofCurrentUser
         }
 
         ApiManager.postItem("groups", newGroup)

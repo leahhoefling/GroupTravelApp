@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
 import { Image, Col, Button } from "react-bootstrap";
 
 
@@ -20,7 +22,16 @@ export default props => {
             <div id=
                 "CTA">
                 <h3>Where is your group off to?</h3>
-                <Button bsSize="large">Start New Group Trip</Button>
+                <Button bsSize="large">
+                    <Link
+                        className="button-link"
+                        to={{
+                            pathname: `/addgroup`,
+                        }}
+                    >
+                        Start New Group Trip
+        </Link>
+                </Button>
             </div>
         </React.Fragment>
     )

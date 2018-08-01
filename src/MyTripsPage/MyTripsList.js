@@ -1,29 +1,38 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import MyTripsCards from "./MyTripsCards";
+import ApiManager from "../API/ApiManager";
+export default class MyTripsList extends Component {
+    constructor() {
+        super();
+        this.state = {
+            groups: [],
+        };
+    }
 
-export default class MyTrips extends Component {
-    //     state = {
-    //         MyTrips: []
-    //     }
+    componentDidMount() {
+        let userId = ApiManager.getIdofCurrentUser()
+        console.log("user", userId);
 
-    //     componentDidMount() {
-    //         fetch("http://localhost:5002/mytrips/{user.id}")
-    //             .then(e => e.json())
-    //             .then(MyTrips => this.setState({ MyTrips: MyTrips }))
-    //     }
+        ApiManager.getUserTrip("groups", userId)
+            .then(groups => {
+                console.log("groups", groups);
+
+                this.setState({ groups: groups })
+            })
+    }
 
     render() {
         return (
             <React.Fragment>
                 <div><h1>My Trips</h1> </div>
-
-                {/*
-                     this.state.mytrips.map(mytrip =>
-                         <Employee key={employee.id} employee={employee} foo="hello">
-                             {employee.name}
-                        </Employee>
+                {
+                    this.state.groups.map(mytrip =>
+                        <MyTripsCards key={mytrip.id} mytrip={mytrip} />
+                        // {/* {mytrip.name} */ }
+                        // </MyTripsCards>
                     )
-                 } */}
+                }
             </React.Fragment>
         )
     }

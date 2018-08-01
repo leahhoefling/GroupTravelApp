@@ -8,6 +8,22 @@ const ApiManager = Object.create(
                 );
             }
         },
+        getIdofCurrentUser: {
+            value: () => {
+
+                const databaseString = localStorage.getItem("credentials")
+                const currentUserObject = JSON.parse(databaseString)
+                console.log("User stuff", currentUserObject)
+                return currentUserObject.user
+            }
+        },
+        getUserTrip: {
+            value: (collectionName, id) => {
+                return fetch(`http://localhost:5002/${collectionName}?userId=${id}`).then(e =>
+                    e.json()
+                );
+            }
+        },
         deleteItem: {
             value: (collectionName, itemId) => {
                 return fetch(`http://localhost:5002/${collectionName}/${itemId}`, {

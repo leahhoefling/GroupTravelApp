@@ -21,27 +21,25 @@
   ],
   "groups": [
     {
-      "name": "Davis Family- Colorado",
-      "date": "07/28/2018",
-      "id": 1
-    },
-    {
-      "name": "Obama's- Private Island Trip",
-      "date": "2018-07-27",
-      "id": 2
-    },
-    {
-      "name": "William's bermuda triangle trip",
-      "date": "2018-08-24",
-      "userId": 1,
-      "id": 6
-    },
-    {
       "name": "Cohort 26 - Disney",
       "startDate": "2018-07-28",
       "endDate": "2018-09-14",
       "userId": 1,
       "id": 7
+    },
+    {
+      "name": "adelaide trip!!!",
+      "startDate": "2018-08-24",
+      "endDate": "2018-08-09",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "name": "harper's trip!!!",
+      "startDate": "2018-08-24",
+      "endDate": "2018-08-09",
+      "userId": 3,
+      "id": 8
     }
   ]
 }
