@@ -40,6 +40,30 @@
       "endDate": "2018-08-09",
       "userId": 3,
       "id": 8
+    },
+    {
+      "name": "Hoefling Honeymoon- Cape Town",
+      "startDate": "2018-11-13",
+      "endDate": "2018-11-30",
+      "id": 9
+    }
+  ],
+  "suggestions": [
+    {
+      "name": "Hike Table Mountain",
+      "cost": "$0",
+      "description": "We will get to hike one of the New 7 Wonders of Nature to see a great view of Cape Town.",
+      "link": "https://hiketablemountain.co.za/",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "name": "Great White Shark Cage Dive",
+      "cost": "$119",
+      "description": "We will get to go to Gaansbai to dive with Great White Sharks to see them upclose!",
+      "link": "http://sharklady.co.za/",
+      "userId": 1,
+      "id": 2
     }
   ]
 }
