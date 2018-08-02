@@ -74,6 +74,13 @@
       "endDate": "2018-08-05",
       "userId": 4,
       "id": 13
+    },
+    {
+      "name": "Vik's trip to london",
+      "startDate": "2018-08-17",
+      "endDate": "2018-08-31",
+      "userId": 4,
+      "id": 14
     }
   ],
   "suggestions": [

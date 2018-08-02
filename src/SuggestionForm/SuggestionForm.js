@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel, MenuItem, DropdownButton, ButtonToolbar } from "react-bootstrap";
 import ApiManager from "../API/ApiManager";
 import "./SuggestionForm.css";
+import MyTripsCards from "../MyTripsPage/MyTripsCards";
+
 
 
 export default class SuggestionForm extends Component {
@@ -16,8 +18,21 @@ export default class SuggestionForm extends Component {
             link: "",
             rank: 0,
             user: ApiManager.getIdofCurrentUser(),
+            groups: []
         };
     }
+
+    componentDidMount() {
+        let dropdownGroupName;
+        ApiManager.getAll("groups")
+            .then((groups) => {
+                console.log("groupS", groups);
+                this.setState({ groups: groups })
+                // console.log("group name", dropdownGroupName);
+            })
+    }
+
+
     //this is just making sure the field isn't empty. I can also add further requirements if I want to
     validateForm() {
         return this.state.name.length > 0 && this.state.cost.length > 0 && this.state.description.length > 0;
@@ -62,18 +77,27 @@ export default class SuggestionForm extends Component {
 
 
 
+
     render() {
+        console.log("this.state.groups", this.state.groups);
+
+
+
         return (
             <div className="suggestion">
                 <form onSubmit={this.handleSubmit}>
+                    <h2>Add a Suggestion for a Group Trip!</h2>
                     <FormGroup controlId="trip" bsSize="large">
                         <ControlLabel>Select Which Trip You're Adding a Suggestion To:</ControlLabel>
+                        {/* this is the dropdown button to select trips */}
                         <ButtonToolbar>
                             <DropdownButton title="Select Group Trip" id="dropdown-size-medium">
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3">Something else here</MenuItem>
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                {/* mapping through the state of groups and making each name a menu item */}
+                                {this.state.groups.map((group) => {
+                                    return (<MenuItem>
+                                        {group.name}
+                                    </MenuItem>)
+                                })}
                             </DropdownButton>
                         </ButtonToolbar>
                     </FormGroup>
@@ -126,7 +150,7 @@ export default class SuggestionForm extends Component {
                         Add New Suggestion
           </Button>
                 </form>
-            </div>
+            </div >
         );
     }
 }
