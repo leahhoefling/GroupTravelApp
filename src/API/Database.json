@@ -17,6 +17,12 @@
       "email": "harpergwin@gmail.com",
       "password": "pass",
       "id": 3
+    },
+    {
+      "name": "Leah Heck",
+      "email": "leahmheck@gmail.com",
+      "password": "pass",
+      "id": 4
     }
   ],
   "groups": [
@@ -54,6 +60,20 @@
       "endDate": "2018-08-19",
       "userId": 1,
       "id": 11
+    },
+    {
+      "name": "Heck Family Trip - Louisville, KY",
+      "startDate": "2018-08-31",
+      "endDate": "2018-09-05",
+      "userId": 4,
+      "id": 12
+    },
+    {
+      "name": "Leah & Justin - California ",
+      "startDate": "2018-07-28",
+      "endDate": "2018-08-05",
+      "userId": 4,
+      "id": 13
     }
   ],
   "suggestions": [
@@ -72,6 +92,39 @@
       "link": "http://sharklady.co.za/",
       "userId": 1,
       "id": 2
+    },
+    {
+      "name": "Snorkel with Seals",
+      "cost": "$67",
+      "description": "We get to snorkel with hundreds of seals of Cape Town's coast!",
+      "link": "http://sealsnorkeling.com/",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "name": "see lil otters",
+      "cost": "$0",
+      "description": "OTTERRRRRSSSS",
+      "link": "",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "name": "Golden Gate Bridge",
+      "cost": "$0",
+      "description": "See Golden Gate Bridge from Battery Godfrey.",
+      "link": "",
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "name": "Venice Beach",
+      "cost": "$0",
+      "description": "Walk around Venice Beach",
+      "link": "",
+      "userId": 4,
+      "rank": 0,
+      "id": 6
     }
   ]
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Button, FormGroup, FormControl, ControlLabel, MenuItem, DropdownButton, ButtonToolbar } from "react-bootstrap";
 import ApiManager from "../API/ApiManager";
 import "./SuggestionForm.css";
 
@@ -14,6 +14,7 @@ export default class SuggestionForm extends Component {
             cost: "",
             description: "",
             link: "",
+            rank: 0,
             user: ApiManager.getIdofCurrentUser(),
         };
     }
@@ -48,6 +49,7 @@ export default class SuggestionForm extends Component {
             link: this.state.link,
             tripId: this.state.tripId,
             userId: ApiManager.getIdofCurrentUser(),
+            rank: 0
 
         }
 
@@ -64,6 +66,17 @@ export default class SuggestionForm extends Component {
         return (
             <div className="suggestion">
                 <form onSubmit={this.handleSubmit}>
+                    <FormGroup controlId="trip" bsSize="large">
+                        <ControlLabel>Select Which Trip You're Adding a Suggestion To:</ControlLabel>
+                        <ButtonToolbar>
+                            <DropdownButton title="Select Group Trip" id="dropdown-size-medium">
+                                <MenuItem eventKey="1">Action</MenuItem>
+                                <MenuItem eventKey="2">Another action</MenuItem>
+                                <MenuItem eventKey="3">Something else here</MenuItem>
+                                <MenuItem eventKey="4">Separated link</MenuItem>
+                            </DropdownButton>
+                        </ButtonToolbar>
+                    </FormGroup>
                     <FormGroup controlId="name" bsSize="large">
                         <ControlLabel>Suggestion Name</ControlLabel>
                         <FormControl
@@ -110,7 +123,7 @@ export default class SuggestionForm extends Component {
                         disabled={!this.validateForm()}
                         type="submit"
                     >
-                        Add Group Trip
+                        Add New Suggestion
           </Button>
                 </form>
             </div>

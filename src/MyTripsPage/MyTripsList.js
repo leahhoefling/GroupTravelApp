@@ -12,11 +12,11 @@ export default class MyTripsList extends Component {
 
     componentDidMount() {
         let userId = ApiManager.getIdofCurrentUser()
-        console.log("user", userId);
+        // console.log("user", userId);
 
         ApiManager.getUserTrip("groups", userId)
             .then(groups => {
-                console.log("groups", groups);
+                // console.log("groups", groups);
 
                 this.setState({ groups: groups })
             })
