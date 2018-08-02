@@ -8,7 +8,7 @@
     },
     {
       "name": "Benjamin",
-      "email": "benj@benjamin.com",
+      "email": "benjamin@eventbrite.com",
       "password": "pass",
       "id": 2
     },
@@ -42,32 +42,18 @@
       "id": 9
     },
     {
-      "name": "test with state",
-      "startDate": "2018-08-24",
-      "endDate": "2018-08-25",
-      "userId": "",
+      "name": "Benjamin Bachelor Party- 30A, FL",
+      "startDate": "2018-08-30",
+      "endDate": "2018-09-03",
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "name": "Leah's Bachelorette Party- Asheville, NC",
+      "startDate": "2018-08-17",
+      "endDate": "2018-08-19",
+      "userId": 1,
       "id": 11
-    },
-    {
-      "name": "Emily's",
-      "startDate": "2018-08-16",
-      "endDate": "2018-08-11",
-      "userId": "",
-      "id": 12
-    },
-    {
-      "name": "owen-wow",
-      "startDate": "2018-08-18",
-      "endDate": "2018-08-25",
-      "userId": 1,
-      "id": 13
-    },
-    {
-      "name": "with state",
-      "startDate": "2018-08-10",
-      "endDate": "2018-08-25",
-      "userId": 1,
-      "id": 14
     }
   ],
   "suggestions": [

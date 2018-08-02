@@ -1,21 +1,25 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import ApiManager from "../API/ApiManager";
+import "./SuggestionForm.css";
+
 
 export default class SuggestionForm extends Component {
     constructor(props) {
         super(props);
         //this is where I'm storing the input that the user inputs into the suggestion form
         this.state = {
+            trip: "",
             name: "",
             cost: "",
             description: "",
-            link: ""
+            link: "",
+            user: ApiManager.getIdofCurrentUser(),
         };
     }
     //this is just making sure the field isn't empty. I can also add further requirements if I want to
     validateForm() {
-        return this.state.name.length > 0 && this.state.startDate.length > 0 && this.state.endDate.length > 0;
+        return this.state.name.length > 0 && this.state.cost.length > 0 && this.state.description.length > 0;
     }
 
     handleChange = event => {
@@ -37,14 +41,17 @@ export default class SuggestionForm extends Component {
         console.log("signed user", signedInUser);
 
 
-        let newGroup = {
+        let newSuggestion = {
             name: this.state.name,
-            startDate: this.state.startDate,
-            endDate: this.state.endDate,
-            userId: ApiManager.getIdofCurrentUser
+            cost: this.state.cost,
+            description: this.state.description,
+            link: this.state.link,
+            tripId: this.state.tripId,
+            userId: ApiManager.getIdofCurrentUser(),
+
         }
 
-        ApiManager.postItem("groups", newGroup)
+        ApiManager.postItem("suggestions", newSuggestion)
             .then(() => {
                 //redirects to "my trips" so they can see what they added
                 this.props.history.push('/mytrips')
@@ -55,34 +62,46 @@ export default class SuggestionForm extends Component {
 
     render() {
         return (
-            <div className="groupTrip">
+            <div className="suggestion">
                 <form onSubmit={this.handleSubmit}>
                     <FormGroup controlId="name" bsSize="large">
-                        <ControlLabel>Name of Trip (Group + Location)</ControlLabel>
+                        <ControlLabel>Suggestion Name</ControlLabel>
                         <FormControl
                             //autofocus gives attn to the email input for the user to know where to type
                             autoFocus
                             type="text"
-                            placeholder="(i.e. Smith Family- London)"
+                            placeholder="(e.g., Visit the Eiffel Tower)"
                             //this sets the state each time when user inputs
                             value={this.state.name}
                             onChange={this.handleChange}
                         />
                     </FormGroup>
-                    <FormGroup controlId="startDate" bsSize="large">
-                        <ControlLabel>Start Date of Trip</ControlLabel>
+                    <FormGroup controlId="cost" bsSize="large">
+                        <ControlLabel>Cost of Suggestion</ControlLabel>
                         <FormControl
-                            value={this.state.startDate}
+                            value={this.state.cost}
                             onChange={this.handleChange}
-                            type="date"
+                            placeholder="(e.g., $29.04)"
+                            type="text"
                         />
                     </FormGroup>
-                    <FormGroup controlId="endDate" bsSize="large">
-                        <ControlLabel>End Date of Trip</ControlLabel>
+                    <FormGroup controlId="description" bsSize="large">
+                        <ControlLabel>Description</ControlLabel>
                         <FormControl
-                            value={this.state.endDate}
+                            value={this.state.description}
                             onChange={this.handleChange}
-                            type="date"
+                            placeholder="(e.g., 'It is THE eiffel tower. We MUST go!')"
+
+                            type="text"
+                        />
+                    </FormGroup>
+                    <FormGroup controlId="link" bsSize="large">
+                        <ControlLabel>Link to Suggestion</ControlLabel>
+                        <FormControl
+                            value={this.state.link}
+                            onChange={this.handleChange}
+                            placeholder="(e.g., https://www.toureiffel.paris/)"
+                            type="url"
                         />
                     </FormGroup>
                     <Button
