@@ -11,7 +11,7 @@ export default class AddGroupTrip extends Component {
             name: "",
             startDate: "",
             endDate: "",
-            user: ""
+            user: ApiManager.getIdofCurrentUser()
         };
     }
     //this is just making sure the field isn't empty. I can also add further requirements if I want to
@@ -42,7 +42,7 @@ export default class AddGroupTrip extends Component {
             name: this.state.name,
             startDate: this.state.startDate,
             endDate: this.state.endDate,
-            userId: ApiManager.getIdofCurrentUser
+            userId: this.state.user
         }
 
         ApiManager.postItem("groups", newGroup)

@@ -1,0 +1,10 @@
+@media all and (min-width: 480px) {
+    .suggestion {
+      padding: 60px 0;
+    }
+
+    .suggestion form {
+      margin: 0 auto;
+      max-width: 500px;
+}
+}
