@@ -40,11 +40,19 @@ export default class MyTripsList extends Component {
                         // </MyTripsCards>
                     )
                 }
+                {/* //the first ToDo is the import(name of the component), then we're passing in the individual task from the array to then assign it a key w/ an id and set it to a variable to be called later(on the other side itll be called props.toDo)
+          <Todo
+            key={task.id}
+            toDo={task}
+            setTaskState={this.props.setTaskState}
+            // editFunction={this.props.}
+          />
+        ))} */}
                 {
                     this.state.suggestions.map(mySugTrip =>
-                        <MyTripsCards key={mySugTrip.id} mytrip={mySugTrip} >
-                            {mySugTrip.name}
-                        </MyTripsCards>
+                        <MyTripsCards
+                            key={mySugTrip.id}
+                            mytrip={mySugTrip.group} />
                     )
                 }
             </React.Fragment>
