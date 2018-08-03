@@ -24,9 +24,16 @@ export default class MyTripsList extends Component {
 
         ApiManager.getUserSuggestionTrip(userId)
             .then(allTrips => {
+                let remDup = this.removeDuplicates(allTrips, "groupId")
                 // console.log("suggestions", suggestions);
-                this.setState({ suggestions: allTrips })
+                this.setState({ suggestions: remDup })
             })
+    }
+    //here's where I got this code: https://ilikekillnerds.com/2016/05/removing-duplicate-objects-array-property-name-javascript/
+    removeDuplicates = (myArr, prop) => {
+        return myArr.filter((obj, pos, arr) => {
+            return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+        });
     }
 
     render() {
@@ -40,14 +47,7 @@ export default class MyTripsList extends Component {
                         // </MyTripsCards>
                     )
                 }
-                {/* //the first ToDo is the import(name of the component), then we're passing in the individual task from the array to then assign it a key w/ an id and set it to a variable to be called later(on the other side itll be called props.toDo)
-          <Todo
-            key={task.id}
-            toDo={task}
-            setTaskState={this.props.setTaskState}
-            // editFunction={this.props.}
-          />
-        ))} */}
+
                 {
                     this.state.suggestions.map(mySugTrip =>
                         <MyTripsCards
