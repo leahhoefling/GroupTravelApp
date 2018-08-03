@@ -76,7 +76,7 @@
       "description": "We will get to hike one of the New 7 Wonders of Nature to see a great view of Cape Town.",
       "link": "https://hiketablemountain.co.za/",
       "userId": 1,
-      "tripId": 9,
+      "groupId": 9,
       "id": 1
     },
     {
@@ -85,7 +85,7 @@
       "description": "We will get to go to Gaansbai to dive with Great White Sharks to see them upclose!",
       "link": "http://sharklady.co.za/",
       "userId": 1,
-      "tripId": 9,
+      "groupId": 9,
       "id": 2
     },
     {
@@ -94,7 +94,7 @@
       "description": "We get to snorkel with hundreds of seals of Cape Town's coast!",
       "link": "http://sealsnorkeling.com/",
       "userId": 2,
-      "tripId": 9,
+      "groupId": 9,
       "id": 3
     },
     {
@@ -103,7 +103,7 @@
       "description": "OTTERRRRRSSSS",
       "link": "",
       "userId": 4,
-      "tripId": 13,
+      "groupId": 13,
       "id": 4
     },
     {
@@ -112,7 +112,7 @@
       "description": "See Golden Gate Bridge from Battery Godfrey.",
       "link": "",
       "userId": 4,
-      "tripId": 13,
+      "groupId": 13,
       "id": 5
     },
     {
@@ -122,8 +122,18 @@
       "link": "",
       "userId": 4,
       "rank": 0,
-      "tripId": 13,
+      "groupId": 13,
       "id": 6
+    },
+    {
+      "name": "Sand Boarding",
+      "cost": "$30",
+      "description": "It is like snowboarding... but on a sand dune!",
+      "link": "http://sandboardingcapetown.com/",
+      "userId": 2,
+      "rank": 0,
+      "groupId": 9,
+      "id": 7
     }
   ]
 }
