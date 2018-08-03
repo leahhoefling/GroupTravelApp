@@ -24,6 +24,13 @@ const ApiManager = Object.create(
                 );
             }
         },
+        getUserSuggestionTrip: {
+            value: (id) => {
+                return fetch(`http://localhost:5002/suggestions?userId=${id}&_expand=group`).then(e =>
+                    e.json()
+                );
+            }
+        },
         deleteItem: {
             value: (collectionName, itemId) => {
                 return fetch(`http://localhost:5002/${collectionName}/${itemId}`, {
