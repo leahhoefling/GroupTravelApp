@@ -42,7 +42,15 @@ export default class SuggestionForm extends Component {
         this.setState({
             [event.target.id]: event.target.value
         });
+        console.log("event.target.id", event.target.id);
+        console.log("value", event.target.value);
+        console.log("event.target", event.target);
     };
+    /* this is React's simple dropdown "handleChange" function from their forms documentation... still doesnt change state/ getting error */
+    handleDropdown(event) {
+        this.setState({ value: event.target.value });
+    }
+
 
     handleSubmit = event => {
         event.preventDefault();
@@ -87,7 +95,9 @@ export default class SuggestionForm extends Component {
             <div className="suggestion">
                 <form onSubmit={this.handleSubmit}>
                     <h2>Add a Suggestion for a Group Trip!</h2>
-                    <FormGroup controlId="trip" bsSize="large">
+                    <FormGroup controlId="trip" bsSize="large"
+                        value={this.state.trip}
+                        onChange={this.handleChange}>
                         <ControlLabel>Select Which Trip You're Adding a Suggestion To:</ControlLabel>
                         {/* this is the dropdown button to select trips */}
                         <ButtonToolbar>
@@ -101,6 +111,21 @@ export default class SuggestionForm extends Component {
                             </DropdownButton>
                         </ButtonToolbar>
                     </FormGroup>
+                    {/* this is React's simple dropdown from their forms documentation... still doesnt change state */}
+                    <label>
+                        Select Which Trip You're Adding a Suggestion To:
+          <select id="trip"
+                            value={this.state.trip}
+                            onChange={this.handleDropdown}>
+                            {/* mapping through the state of groups and making each name a menu item */}
+                            {this.state.groups.map((group) => {
+                                return (
+                                    <option value={this.state.trip}>
+                                        {group.name}
+                                    </option>)
+                            })}
+                        </select>
+                    </label>
                     <FormGroup controlId="name" bsSize="large">
                         <ControlLabel>Suggestion Name</ControlLabel>
                         <FormControl
