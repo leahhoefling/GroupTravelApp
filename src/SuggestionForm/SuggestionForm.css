@@ -8,3 +8,9 @@
       max-width: 500px;
 }
 }
+
+.scrollbar {
+  height: auto;
+  max-height: 180px;
+  overflow-x: hidden;
+}
