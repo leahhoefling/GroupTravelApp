@@ -22,6 +22,12 @@ export default class MyTripsList extends Component {
                     this.setState({ groups: groups })
                 })
 
+        //this is the previous call i was making that was giving me duplicates of suggestions
+        // ApiManager.getUserSuggestionTrip(userId)
+        //     .then(allTrips => {
+        //         this.setState({ suggestions: allTrips })
+        //     })
+
         ApiManager.getUserSuggestionTrip(userId)
             .then(allTrips => {
                 let remDup = this.removeDuplicates(allTrips, "groupId")
@@ -59,3 +65,9 @@ export default class MyTripsList extends Component {
         )
     }
 }
+
+
+
+//heres some thoughts of where I left off:
+//1) im getting the error "Unhandled Rejection (SyntaxError): Unexpected token T in JSON at position 0" on the API function
+//2) I just realized my duplicates function doesnt work for checking between the groups array and the suggestions groups array

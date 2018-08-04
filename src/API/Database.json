@@ -67,6 +67,13 @@
       "endDate": "2018-08-05",
       "userId": 4,
       "id": 13
+    },
+    {
+      "name": "Gwin trip- NYC",
+      "startDate": "2018-08-24",
+      "endDate": "2018-08-27",
+      "userId": 1,
+      "id": 14
     }
   ],
   "suggestions": [
@@ -134,6 +141,35 @@
       "rank": 0,
       "groupId": 9,
       "id": 7
+    },
+    {
+      "name": "Meet lots of dog friends",
+      "cost": "$0",
+      "description": "Make friends and play with them",
+      "link": "",
+      "userId": 2,
+      "rank": 0,
+      "id": 8,
+      "groupId": 8
+    },
+    {
+      "name": "Visit Napa Valley",
+      "cost": "$100",
+      "description": "Drink all the wine",
+      "link": "",
+      "userId": 1,
+      "rank": 0,
+      "id": 9,
+      "groupId": 13
+    },
+    {
+      "name": "11",
+      "cost": "1",
+      "description": "1",
+      "link": "",
+      "userId": 1,
+      "rank": 0,
+      "id": 10
     }
   ]
 }

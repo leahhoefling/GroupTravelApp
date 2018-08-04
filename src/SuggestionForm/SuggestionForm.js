@@ -18,7 +18,8 @@ export default class SuggestionForm extends Component {
             link: "",
             rank: 0,
             user: ApiManager.getIdofCurrentUser(),
-            groups: []
+            groups: [],
+            title: "Select Group Trip"
         };
     }
 
@@ -38,6 +39,8 @@ export default class SuggestionForm extends Component {
         return this.state.name.length > 0 && this.state.cost.length > 0 && this.state.description.length > 0;
     }
 
+
+
     handleChange = event => {
         this.setState({
             [event.target.id]: event.target.value
@@ -46,9 +49,15 @@ export default class SuggestionForm extends Component {
         console.log("value", event.target.value);
         console.log("event.target", event.target);
     };
+
     /* this is React's simple dropdown "handleChange" function from their forms documentation... still doesnt change state/ getting error */
-    handleDropdown(event) {
-        this.setState({ value: event.target.value });
+    handleDropdown = (undefined, event) => {
+        let key = event.target.getAttribute('val');
+        console.log('event.target.title', event.target)
+        this.setState({
+            [event.target.getAttribute('val')]: event.target.getAttribute('value'),
+            title: event.target.getAttribute('value')
+        });
     }
 
 
@@ -87,7 +96,7 @@ export default class SuggestionForm extends Component {
 
 
     render() {
-        console.log("this.state.groups", this.state.groups);
+        console.log("this.state.groups", this.state);
 
 
 
@@ -97,14 +106,15 @@ export default class SuggestionForm extends Component {
                     <h2>Add a Suggestion for a Group Trip!</h2>
                     <FormGroup controlId="trip" bsSize="large"
                         value={this.state.trip}
-                        onChange={this.handleChange}>
+                    >
+                        <p>trip state: {this.state.trip}</p>
                         <ControlLabel>Select Which Trip You're Adding a Suggestion To:</ControlLabel>
-                        {/* this is the dropdown button to select trips */}
-                        <ButtonToolbar>
-                            <DropdownButton title="Select Group Trip" id="dropdown-size-medium">
-                                {/* mapping through the state of groups and making each name a menu item */}
-                                {this.state.groups.map((group) => {
-                                    return (<MenuItem>
+
+                        <ButtonToolbar >
+                            <DropdownButton title={this.state.title} id="dropdown-size-medium" onSelect={this.handleDropdown}>
+
+                                {this.state.groups.map((group, i) => {
+                                    return (<MenuItem key={i} val="trip" value={group.name}>
                                         {group.name}
                                     </MenuItem>)
                                 })}
@@ -112,20 +122,20 @@ export default class SuggestionForm extends Component {
                         </ButtonToolbar>
                     </FormGroup>
                     {/* this is React's simple dropdown from their forms documentation... still doesnt change state */}
-                    <label>
+                    {/* <label>
                         Select Which Trip You're Adding a Suggestion To:
           <select id="trip"
                             value={this.state.trip}
-                            onChange={this.handleDropdown}>
-                            {/* mapping through the state of groups and making each name a menu item */}
-                            {this.state.groups.map((group) => {
+                            onChange={this.handleDropdown}> */}
+                    {/* mapping through the state of groups and making each name a menu item */}
+                    {/* {this.state.groups.map((group) => {
                                 return (
                                     <option value={this.state.trip}>
                                         {group.name}
                                     </option>)
                             })}
                         </select>
-                    </label>
+                    </label> */}
                     <FormGroup controlId="name" bsSize="large">
                         <ControlLabel>Suggestion Name</ControlLabel>
                         <FormControl
