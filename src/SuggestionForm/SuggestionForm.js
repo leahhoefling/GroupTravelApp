@@ -12,6 +12,7 @@ export default class SuggestionForm extends Component {
         //this is where I'm storing the input that the user inputs into the suggestion form
         this.state = {
             trip: "",
+            tripId: null, //aka groupID
             name: "",
             cost: "",
             description: "",
@@ -40,7 +41,6 @@ export default class SuggestionForm extends Component {
     }
 
 
-
     handleChange = event => {
         this.setState({
             [event.target.id]: event.target.value
@@ -50,13 +50,13 @@ export default class SuggestionForm extends Component {
         console.log("event.target", event.target);
     };
 
-    /* this is React's simple dropdown "handleChange" function from their forms documentation... still doesnt change state/ getting error */
     handleDropdown = (undefined, event) => {
-        let key = event.target.getAttribute('val');
-        console.log('event.target.title', event.target)
+        const tripValue = event.target.getAttribute('value');
+        const id = parseInt(event.target.getAttribute('id'));
         this.setState({
-            [event.target.getAttribute('val')]: event.target.getAttribute('value'),
-            title: event.target.getAttribute('value')
+            [event.target.getAttribute('trip')]: tripValue,
+            title: tripValue,
+            tripId: id,
         });
     }
 
@@ -71,19 +71,21 @@ export default class SuggestionForm extends Component {
         } else {
             signedInUser = signedInUser.user;
         }
-        console.log("signed user", signedInUser);
+        // console.log("signed user", signedInUser);
 
+        console.log(event);
 
         let newSuggestion = {
             name: this.state.name,
             cost: this.state.cost,
             description: this.state.description,
             link: this.state.link,
-            tripId: this.state.tripId,
+            groupId: this.state.tripId,
             userId: ApiManager.getIdofCurrentUser(),
             rank: 0
 
         }
+        console.log('newSuggestion', newSuggestion);
 
         ApiManager.postItem("suggestions", newSuggestion)
             .then(() => {
@@ -96,9 +98,7 @@ export default class SuggestionForm extends Component {
 
 
     render() {
-        console.log("this.state.groups", this.state);
-
-
+        // console.log("this.state.groups", this.state);
 
         return (
             <div className="suggestion">
@@ -107,35 +107,21 @@ export default class SuggestionForm extends Component {
                     <FormGroup controlId="trip" bsSize="large"
                         value={this.state.trip}
                     >
-                        <p>trip state: {this.state.trip}</p>
+                        {/* <p>trip state: {this.state.trip}</p> */}
                         <ControlLabel>Select Which Trip You're Adding a Suggestion To:</ControlLabel>
 
                         <ButtonToolbar >
                             <DropdownButton title={this.state.title} id="dropdown-size-medium" onSelect={this.handleDropdown}>
 
                                 {this.state.groups.map((group, i) => {
-                                    return (<MenuItem key={i} val="trip" value={group.name}>
+                                    return (<MenuItem key={i} trip="trip" value={group.name} id={group.id}>
                                         {group.name}
                                     </MenuItem>)
                                 })}
                             </DropdownButton>
                         </ButtonToolbar>
                     </FormGroup>
-                    {/* this is React's simple dropdown from their forms documentation... still doesnt change state */}
-                    {/* <label>
-                        Select Which Trip You're Adding a Suggestion To:
-          <select id="trip"
-                            value={this.state.trip}
-                            onChange={this.handleDropdown}> */}
-                    {/* mapping through the state of groups and making each name a menu item */}
-                    {/* {this.state.groups.map((group) => {
-                                return (
-                                    <option value={this.state.trip}>
-                                        {group.name}
-                                    </option>)
-                            })}
-                        </select>
-                    </label> */}
+
                     <FormGroup controlId="name" bsSize="large">
                         <ControlLabel>Suggestion Name</ControlLabel>
                         <FormControl
