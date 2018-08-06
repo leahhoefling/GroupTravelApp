@@ -70,6 +70,7 @@
       "link": "https://hiketablemountain.co.za/",
       "userId": 1,
       "groupId": 9,
+      "rank": 0,
       "id": 1
     },
     {
@@ -79,6 +80,7 @@
       "link": "http://sharklady.co.za/",
       "userId": 1,
       "groupId": 9,
+      "rank": 0,
       "id": 2
     },
     {
@@ -88,6 +90,7 @@
       "link": "http://sealsnorkeling.com/",
       "userId": 2,
       "groupId": 9,
+      "rank": 0,
       "id": 3
     },
     {

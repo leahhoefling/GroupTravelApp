@@ -18,8 +18,10 @@ export default class ItineraryCards extends Component {
                     <p className="card-text">{this.props.suggestion.cost}</p>
                     <h5 className="card-title">Description</h5>
                     <p className="card-text">{this.props.suggestion.description}</p>
-                    <h5 className="card-title">Link to Suggestion</h5>
-                    <p className="card-text">{this.props.suggestion.link}</p>
+                    <h5 className="card-title">Link to Suggestion:</h5>
+                    <a href className="card-link">{this.props.suggestion.link}</a>
+                    <h5 className="card-title">Points:</h5>
+                    <p className="card-text">{this.props.suggestion.rank}</p>
                     <p>
                         <Button bsStyle="primary">UPVOTE</Button>
                     </p>
