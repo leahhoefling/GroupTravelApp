@@ -7,6 +7,7 @@ import Register from "./LoginPage/Register";
 import Home from "./Home/HomeDashboard";
 import SuggestionForm from "./SuggestionForm/SuggestionForm";
 import MyTrips from "./MyTripsPage/MyTripsList";
+import ItineraryList from "./Itinerary/ItineraryList";
 import AddGroupTrip from "./AddTripGroup/AddGroupForm";
 
 
@@ -22,6 +23,7 @@ export default class ApplicationViews extends Component {
         <Route exact path="/home" component={Home} />
         <Route exact path="/suggestion" component={SuggestionForm} />
         <Route exact path="/mytrips" component={MyTrips} />
+        <Route exact path="/itinerary" component={ItineraryList} />
         <Route exact path="/addgroup" component={AddGroupTrip} />
 
       </React.Fragment>

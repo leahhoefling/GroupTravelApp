@@ -24,7 +24,7 @@ export default class ItineraryCards extends Component {
                         <Button bsStyle="primary">UPVOTE</Button>
                     </p>
                     <p>
-                        <Button bsStyle="danger">UPVOTE</Button>
+                        <Button bsStyle="danger">DOWN-VOTE</Button>
                     </p>
                 </div>
             </div >

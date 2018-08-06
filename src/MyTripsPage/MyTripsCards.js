@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types"
-import { Jumbotron, Button } from "react-bootstrap";
+// import { Link } from "react-router-dom";
+// import PropTypes from "prop-types"
+import { Button } from "react-bootstrap";
 import ApiManager from "../API/ApiManager";
 import { Component } from "react";
 import "./MyTripsCards.css"
