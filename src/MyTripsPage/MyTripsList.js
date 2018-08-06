@@ -46,7 +46,7 @@ export default class MyTripsList extends Component {
     render() {
         return (
             <React.Fragment>
-                <div><h1>My Trips</h1> </div>
+                <div><h1>My Trips</h1></div>
                 {
                     this.state.groups.map(mytrip =>
                         <MyTripsCards key={mytrip.id} mytrip={mytrip} />
@@ -70,5 +70,4 @@ export default class MyTripsList extends Component {
 
 
 //heres some thoughts of where I left off:
-//1) im getting the error "Unhandled Rejection (SyntaxError): Unexpected token T in JSON at position 0" on the API function
-//2) I just realized my duplicates function doesnt work for checking between the groups array and the suggestions groups array
+//1) I just realized my duplicates function doesnt work for checking between the groups array and the suggestions groups array

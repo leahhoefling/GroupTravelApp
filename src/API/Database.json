@@ -70,6 +70,7 @@
       "link": "https://hiketablemountain.co.za/",
       "userId": 1,
       "groupId": 9,
+      "rank": 2,
       "id": 1
     },
     {
@@ -79,6 +80,7 @@
       "link": "http://sharklady.co.za/",
       "userId": 1,
       "groupId": 9,
+      "rank": 8,
       "id": 2
     },
     {
@@ -88,6 +90,7 @@
       "link": "http://sealsnorkeling.com/",
       "userId": 2,
       "groupId": 9,
+      "rank": 6,
       "id": 3
     },
     {
@@ -96,7 +99,7 @@
       "description": "It is like snowboarding... but on a sand dune!",
       "link": "http://sandboardingcapetown.com/",
       "userId": 2,
-      "rank": 0,
+      "rank": 1,
       "groupId": 9,
       "id": 7
     },
