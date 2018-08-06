@@ -15,7 +15,7 @@ export default class ItineraryList extends Component {
         let userId = ApiManager.getIdofCurrentUser()
         // console.log("user", userId);
 
-        ApiManager.getAll("suggestions")
+        ApiManager.getSuggestionsForTrip("suggestions", 9)
             .then(suggestions => {
                 console.log("suggestions", suggestions);
                 this.setState({ suggestions: suggestions })

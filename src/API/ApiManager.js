@@ -31,6 +31,13 @@ const ApiManager = Object.create(
                 );
             }
         },
+        getSuggestionsForTrip: {
+            value: (collectionName, id) => {
+                return fetch(`http://localhost:5002/${collectionName}?groupId=${id}`).then(e =>
+                    e.json()
+                );
+            }
+        },
         deleteItem: {
             value: (collectionName, itemId) => {
                 return fetch(`http://localhost:5002/${collectionName}/${itemId}`, {
