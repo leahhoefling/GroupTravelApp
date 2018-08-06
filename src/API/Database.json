@@ -41,39 +41,25 @@
       "id": 8
     },
     {
-      "name": "Hoefling Honeymoon- Cape Town",
+      "name": "Hoefling Trip- Cape Town",
       "startDate": "2018-11-13",
       "endDate": "2018-11-30",
       "userId": 1,
       "id": 9
     },
     {
-      "name": "Benjamin Bachelor Party- 30A, FL",
+      "name": "Benjamin's Bachelor Party- 30A, FL",
       "startDate": "2018-08-30",
       "endDate": "2018-09-03",
       "userId": 2,
       "id": 10
     },
     {
-      "name": "Leah's Bachelorette Party- Asheville, NC",
+      "name": "Best Friends Reunion- Greece",
       "startDate": "2018-08-17",
       "endDate": "2018-08-19",
       "userId": 1,
       "id": 11
-    },
-    {
-      "name": "Leah & Justin - California ",
-      "startDate": "2018-07-28",
-      "endDate": "2018-08-05",
-      "userId": 4,
-      "id": 13
-    },
-    {
-      "name": "Gwin trip- NYC",
-      "startDate": "2018-08-24",
-      "endDate": "2018-08-27",
-      "userId": 1,
-      "id": 14
     }
   ],
   "suggestions": [
@@ -105,34 +91,6 @@
       "id": 3
     },
     {
-      "name": "see lil otters",
-      "cost": "$0",
-      "description": "OTTERRRRRSSSS",
-      "link": "",
-      "userId": 4,
-      "groupId": 13,
-      "id": 4
-    },
-    {
-      "name": "Golden Gate Bridge",
-      "cost": "$0",
-      "description": "See Golden Gate Bridge from Battery Godfrey.",
-      "link": "",
-      "userId": 4,
-      "groupId": 13,
-      "id": 5
-    },
-    {
-      "name": "Venice Beach",
-      "cost": "$0",
-      "description": "Walk around Venice Beach",
-      "link": "",
-      "userId": 4,
-      "rank": 0,
-      "groupId": 13,
-      "id": 6
-    },
-    {
       "name": "Sand Boarding",
       "cost": "$30",
       "description": "It is like snowboarding... but on a sand dune!",
@@ -151,26 +109,6 @@
       "rank": 0,
       "id": 8,
       "groupId": 8
-    },
-    {
-      "name": "Visit Napa Valley",
-      "cost": "$100",
-      "description": "Drink all the wine",
-      "link": "",
-      "userId": 1,
-      "rank": 0,
-      "id": 9,
-      "groupId": 13
-    },
-    {
-      "name": "thank-you",
-      "cost": "$67",
-      "description": "We'd hike on of the 7 wonders!",
-      "link": "",
-      "groupId": 14,
-      "userId": 2,
-      "rank": 0,
-      "id": 10
     }
   ]
 }

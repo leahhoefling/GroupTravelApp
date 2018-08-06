@@ -2,3 +2,32 @@
     border: 10em;
     border-radius: 5%;
 } */
+
+#welcomeImg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#welcomeLogo {
+    max-width: 15%;
+    height: auto;
+}
+#brandingHeader{
+    align-content: center;
+    text-align: center;
+    padding: 2%;
+    background-color: #f0f5f5;
+}
+
+#CTA {
+    align-content: center;
+    text-align: center;
+    padding: 2%;
+    border-style: solid;
+    border: 1px black;
+    border-radius: 8px;
+}
