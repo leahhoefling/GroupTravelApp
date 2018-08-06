@@ -17,6 +17,7 @@ const ApiManager = Object.create(
                 return currentUserObject.user
             }
         },
+        //this api request gets the trips the user has made
         getUserTrip: {
             value: (collectionName, id) => {
                 return fetch(`http://localhost:5002/${collectionName}?userId=${id}`).then(e =>
@@ -24,6 +25,7 @@ const ApiManager = Object.create(
                 );
             }
         },
+        //this api request gets the trips the user has made suggestions to
         getUserSuggestionTrip: {
             value: (id) => {
                 return fetch(`http://localhost:5002/suggestions?userId=${id}&_expand=group`).then(e =>
@@ -31,9 +33,10 @@ const ApiManager = Object.create(
                 );
             }
         },
+        //this api request gets the specific suggestions for that specific group trip, then sorts them by the rank votes
         getSuggestionsForTrip: {
             value: (collectionName, id) => {
-                return fetch(`http://localhost:5002/${collectionName}?groupId=${id}`).then(e =>
+                return fetch(`http://localhost:5002/${collectionName}?groupId=${id}_sort=rank&_order=desc`).then(e =>
                     e.json()
                 );
             }
