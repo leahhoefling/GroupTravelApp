@@ -21,7 +21,7 @@ export default class ApplicationViews extends Component {
         <Route exact path="/register" component={Register} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/suggestion" component={SuggestionForm} />
-        <Route exact path="/mytrips/" component={MyTrips} />
+        <Route exact path="/mytrips" component={MyTrips} />
         <Route exact path="/addgroup" component={AddGroupTrip} />
 
       </React.Fragment>

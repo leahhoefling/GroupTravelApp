@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import { Image, Col, Button } from "react-bootstrap";
+import SuggestionForm from "../SuggestionForm/SuggestionForm";
+
 
 
 export default props => {
@@ -9,16 +11,26 @@ export default props => {
         <React.Fragment>
             <div>
                 <div>
-                    <Col xs={6} md={4}>
-                        <Image id="welcomeLogo"
-                            src="https://s19.postimg.cc/d7kexd5tv/MAjoritywins.png"
-                            circle
-                        />
-                    </Col>
+                    {/* <Col md={6} offset={{ md: 3 }} */}
+                    <Image id="welcomeImg"
+                        src="https://s15.postimg.cc/7my6lzs57/LG_CPT-2948.jpg"
+
+                    // LOGO: https://s19.postimg.cc/d7kexd5tv/MAjoritywins.png
+
+                    />
+                    {/* </Col> */}
                 </div>
-                <h1>
-                    Welcome to the Home Page!
-        </h1>
+                <div id="brandingHeader">
+                    <Image id="welcomeLogo"
+                        src="https://s19.postimg.cc/d7kexd5tv/MAjoritywins.png"
+                        circle
+                    />
+                    <h1>
+                        Welcome to Majority Wins!
+                </h1>
+
+                </div>
+
                 <div id=
                     "CTA">
                     <h3>Where is your group off to?</h3>
@@ -34,6 +46,13 @@ export default props => {
                     </Button>
                 </div>
             </div>
+
+            <div id="form">
+                <SuggestionForm />
+            </div>
+
         </React.Fragment>
+
+
     )
 };
