@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav } from 'react-bootstrap';
+import "./NavBar.css"
 
 export default class NavBar extends Component {
     render() {
@@ -11,17 +12,18 @@ export default class NavBar extends Component {
                         <Link to="/home">Majority Wins</Link>
                     </Navbar.Brand>
                     {/* To have a mobile friendly Navbar, Add a Navbar.Toggle to your Header and wrap your Navs in a Navbar.Collapse component. The Navbar will automatically wire the toggle and collapse together! */}
+
                     <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
-                    <Nav>
+                    <Nav id="navLinks">
                         <Link to="/home">Home</Link>
                         <Link to="/mytrips">My Trips</Link>
                         <Link to="/suggestion">Add New Trip Suggestion</Link>
 
                     </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+                </Navbar.Collapse >
+            </Navbar >
         )
     }
 }
