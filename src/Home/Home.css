@@ -26,8 +26,22 @@
 #CTA {
     align-content: center;
     text-align: center;
-    padding: 2%;
+    padding: 0% 0% 2% 0%;
     border-style: solid;
-    border: 1px black;
+    border-width: 1pt;
+    border-color: black;
     border-radius: 8px;
+    max-width: 50rem;
+    margin: 5% auto 0%;
+    background-color: #ffd6ba;
+    box-shadow: 2px 2px 18px #888888;
+}
+
+.button-link {
+    color: black;
+}
+
+form h2 {
+    padding: 0% 0% 4% 0%;
+
 }

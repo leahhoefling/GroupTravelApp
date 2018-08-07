@@ -9,6 +9,9 @@ import "./MyTripsCards.css"
 
 export default class MyTripsCards extends Component {
 
+    //on click, send user to Api call: "getSuggestionsForTrip" link with that specific group id
+
+
     render() {
         return (
             <div className="card" style={{ width: `75rem` }}>

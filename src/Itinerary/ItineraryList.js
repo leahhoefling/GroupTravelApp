@@ -12,10 +12,10 @@ export default class ItineraryList extends Component {
     }
 
     componentDidMount() {
-        let userId = ApiManager.getIdofCurrentUser()
-        // console.log("user", userId);
+        //need to figure out how to get the group id...
+        let groupId;
 
-        ApiManager.getSuggestionsForTrip("suggestions", 9)
+        ApiManager.getSuggestionsForTrip("suggestions", groupId)
             .then(suggestions => {
                 console.log("suggestions", suggestions);
                 this.setState({ suggestions: suggestions })
@@ -39,18 +39,8 @@ export default class ItineraryList extends Component {
                 {
                     this.state.suggestions.map(suggestion =>
                         <ItineraryCards key={suggestion.id} suggestion={suggestion} />
-                        // {/* {mytrip.name} */ }
-                        // </MyTripsCards>
                     )
                 }
-
-                {/* {
-                    this.state.suggestions.map(mySugTrip =>
-                        <ItineraryCards
-                            key={mySugTrip.id}
-                            mytrip={mySugTrip.group} />
-                    )
-                } */}
             </React.Fragment>
         )
     }

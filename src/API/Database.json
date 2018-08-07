@@ -112,6 +112,56 @@
       "rank": 0,
       "id": 8,
       "groupId": 8
+    },
+    {
+      "name": "Visit Stellenbosch Vineyards",
+      "cost": "$60",
+      "description": "Some of the top wine in the world comes from this region! Let's bring a picnic and go wine tasting.",
+      "link": "http://www.wineroute.co.za/",
+      "groupId": 9,
+      "userId": 1,
+      "rank": 7,
+      "id": 9
+    },
+    {
+      "name": "Sunrise at Lion's Head Mountain",
+      "cost": "$0",
+      "description": "We can have a 360 degree view of Cape Town while the sunrises over it!",
+      "link": "https://www.tripadvisor.com/ShowUserReviews-g312659-d481585-r308635775-Lion_s_Head-Cape_Town_Central_Western_Cape.html",
+      "groupId": 9,
+      "userId": 1,
+      "rank": 8,
+      "id": 10
+    },
+    {
+      "name": "Cliff Jump in Santorini",
+      "cost": "$0",
+      "description": "Sisterhood of the Traveling Pants did it... and so should we!",
+      "link": "",
+      "groupId": 11,
+      "userId": 1,
+      "rank": 5,
+      "id": 11
+    },
+    {
+      "name": "Eat ALL the Amazing Seafood",
+      "cost": "$25",
+      "description": "The Cave of Nikolas restaurant in Santorini has amazing, fresh seafood.",
+      "link": "http://www.nikolascave.gr/en/",
+      "groupId": 11,
+      "userId": 1,
+      "rank": 8,
+      "id": 12
+    },
+    {
+      "name": "Visit Animal Kingdom",
+      "cost": "$130",
+      "description": "We can go on the Everest Ride and see lots of animals!",
+      "link": "",
+      "groupId": 7,
+      "userId": 1,
+      "rank": 7,
+      "id": 13
     }
   ]
 }
