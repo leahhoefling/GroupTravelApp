@@ -25,9 +25,9 @@ export default props => {
                         src="https://s19.postimg.cc/d7kexd5tv/MAjoritywins.png"
                         circle
                     />
-                    <h1>
+                    {/* <h1>
                         Welcome to Majority Wins!
-                </h1>
+                </h1> */}
 
                 </div>
 

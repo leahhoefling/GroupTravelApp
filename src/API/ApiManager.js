@@ -36,7 +36,7 @@ const ApiManager = Object.create(
         //this api request gets the specific suggestions for that specific group trip, then sorts them by the rank votes
         getSuggestionsForTrip: {
             value: (collectionName, id) => {
-                return fetch(`http://localhost:5002/${collectionName}?groupId=${id}_sort=rank&_order=desc`).then(e =>
+                return fetch(`http://localhost:5002/${collectionName}?groupId=${id}&_sort=rank&_order=desc`).then(e =>
                     e.json()
                 );
             }

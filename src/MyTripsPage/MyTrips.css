@@ -12,3 +12,8 @@
 .card-title {
     font-weight: bold;
 }
+
+div h1{
+    margin: auto;
+    padding: 2% 0% 0% 5%;
+}

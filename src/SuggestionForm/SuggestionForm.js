@@ -103,7 +103,7 @@ export default class SuggestionForm extends Component {
         return (
             <div className="suggestion">
                 <form onSubmit={this.handleSubmit}>
-                    <h2>Add a Suggestion for a Group Trip!</h2>
+                    <h2 id="addSuggestionHeader">Add a Suggestion for a Group Trip!</h2>
                     <FormGroup controlId="trip" bsSize="large"
                         value={this.state.trip}
                     >

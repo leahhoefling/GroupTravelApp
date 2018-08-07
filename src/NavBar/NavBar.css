@@ -1,7 +1,10 @@
  .navbar a{
     padding-right: 20px;
+    color: #555b6e;
+
  }
 
  #navLinks {
     margin-top: 15px;
+    font-weight: bold;
  }
