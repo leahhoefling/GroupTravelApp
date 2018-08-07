@@ -3,18 +3,14 @@
     border-width: 2pt;
     border-color: black;
     border-radius: 2%;
-    padding: 1%;
-    text-align: left;
+    padding: 2%;
+    text-align: center;
     margin: 5% auto;
-    max-width: 75rem;
+    max-width: 50rem;
 }
 
 .card-title {
     font-weight: bold;
-}
-
-h2 {
-    text-align: center;
 }
 
 div h1{
