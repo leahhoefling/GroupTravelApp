@@ -1,10 +1,10 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import PropTypes from "prop-types"
 import { Button } from "react-bootstrap";
 import ApiManager from "../API/ApiManager";
 import { Component } from "react";
-import "./MyTripsCards.css"
+import "./MyTrips.css"
 
 
 export default class MyTripsCards extends Component {
@@ -23,7 +23,14 @@ export default class MyTripsCards extends Component {
                     <p className="card-text">{this.props.mytrip.endDate}</p>
 
                     <p>
-                        <Button bsStyle="primary">Vote and View Itinerary</Button>
+                        <Button bsStyle="primary">
+                            <Link to={{
+                                pathname: "/itinerary",
+                                state: this.props.mytrip
+                            }}>
+                                Vote and View Itinerary
+                                </ Link>
+                        </Button>
                     </p>
                 </div>
             </div >

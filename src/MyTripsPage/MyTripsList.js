@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import MyTripsCards from "./MyTripsCards";
 import ApiManager from "../API/ApiManager";
+import "./MyTrips.css"
+
 export default class MyTripsList extends Component {
     constructor() {
         super();
@@ -46,7 +48,7 @@ export default class MyTripsList extends Component {
     render() {
         return (
             <React.Fragment>
-                <div><h1>My Trips</h1></div>
+                <div id="header"><h1>My Trips</h1></div>
                 {
                     this.state.groups.map(mytrip =>
                         <MyTripsCards key={mytrip.id} mytrip={mytrip} />
