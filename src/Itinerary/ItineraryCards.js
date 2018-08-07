@@ -7,13 +7,16 @@ import { Component } from "react";
 import "./Itinerary.css"
 
 
+
 export default class ItineraryCards extends Component {
 
     render() {
+        console.log("props", this.props);
+
         return (
             <div id={this.props.suggestion.groupId} className="card" style={{ width: `75rem` }}>
                 <div className="card-body">
-                    <h2 className="card-title">{this.props.suggestion.name}</h2>
+                    <h3 className="card-title">{this.props.suggestion.name}</h3>
                     <h5 className="card-title">Cost of Suggestion:</h5>
                     <p className="card-text">{this.props.suggestion.cost}</p>
                     <h5 className="card-title">Description</h5>
@@ -23,10 +26,10 @@ export default class ItineraryCards extends Component {
                     <h5 className="card-title">Points:</h5>
                     <p className="card-text">{this.props.suggestion.rank}</p>
                     <p>
-                        <Button bsStyle="primary" onClick={() => this.props.FUNCTIONNAME(this.props.suggestion.groupId)}>UPVOTE</Button>
+                        <Button bsStyle="primary" onClick={() => this.props.handleClick("up")}>UPVOTE</Button>
                     </p>
                     <p>
-                        <Button bsStyle="danger">DOWN-VOTE</Button>
+                        <Button bsStyle="danger" onClick={() => this.props.handleClick("down")}>DOWN-VOTE</Button>
                     </p>
                 </div>
             </div >
