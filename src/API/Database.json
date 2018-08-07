@@ -106,7 +106,7 @@
       "description": "It is like snowboarding... but on a sand dune!",
       "link": "http://sandboardingcapetown.com/",
       "userId": 2,
-      "rank": 1,
+      "rank": null,
       "groupId": 9,
       "id": 7
     },

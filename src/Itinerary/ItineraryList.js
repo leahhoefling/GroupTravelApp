@@ -30,20 +30,26 @@ export default class ItineraryList extends Component {
         const editedSuggestion = {
             rank: this.state.rank
         };
+        let groupId = this.props.location.state.id;
+
+        console.log("sug id", this.state.suggestions);
+
         if (argument === "up") {
             // collectionName, itemId, theObject
-            ApiManager.patchItem("suggestions", this.state.suggestions.id, editedSuggestion).then(() => {
-                this.setState(({ rank }) => ({
-                    rank: rank + 1
-                }));
-            })
+
+            ApiManager.patchItem("suggestions", groupId, editedSuggestion)
+
+                .then(() => {
+                    this.setState(({ rank }) => ({
+                        rank: parseInt(rank) + 1
+                    }));
+                })
         } else {
             // collectionName, itemId, theObject
-            ApiManager.patchItem("suggestions", this.state.suggestions.id, editedSuggestion).then(() => {
-                this.setState(({ rank }) => ({
-                    rank: rank - 1
-                }));
-            })
+            ApiManager.patchItem("suggestions", groupId, editedSuggestion)
+                .then((rank) => {
+                    this.setState({ rank: rank - 1 })
+                })
         }
 
     }
@@ -61,3 +67,8 @@ export default class ItineraryList extends Component {
         )
     }
 }
+
+
+//thoughts:
+
+//I found where to get the ID for the suggestion but it still isnt patching
