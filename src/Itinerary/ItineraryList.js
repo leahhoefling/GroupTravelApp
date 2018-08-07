@@ -15,24 +15,18 @@ export default class ItineraryList extends Component {
 
     componentDidMount() {
         //need to figure out how to get the group id...
-        let groupId;
+        let groupId = this.props.location.state.id;
 
-        ApiManager.getAll("suggestions?_expand=group&sort=groupId")
-            .then()
 
+
+        //this one needs the group ID and then it should work
         ApiManager.getSuggestionsForTrip("suggestions", groupId)
             .then(suggestions => {
                 console.log("suggestions", suggestions);
                 this.setState({ suggestions: suggestions })
             })
 
-        // this is the previous call i was making that was giving me duplicates of suggestions
-        // ApiManager.getUserSuggestionTrip(userId)
-        //     .then(allTrips => {
-        //         console.log(allTrips);
 
-        //         this.setState({ suggestions: allTrips })
-        //     })
 
     }
 
