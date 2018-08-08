@@ -82,7 +82,7 @@ export default class SuggestionForm extends Component {
             link: this.state.link,
             groupId: this.state.tripId,
             userId: ApiManager.getIdofCurrentUser(),
-            rank: 0
+            rank: this.state.rank
 
         }
         console.log('newSuggestion', newSuggestion);

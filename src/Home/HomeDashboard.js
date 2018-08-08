@@ -12,6 +12,8 @@ export default props => {
             <div>
                 <div>
                     {/* <Col md={6} offset={{ md: 3 }} */}
+
+                    {/* look into "hero" headers */}
                     <Image id="welcomeImg"
                         src="https://s15.postimg.cc/7my6lzs57/LG_CPT-2948.jpg"
 
