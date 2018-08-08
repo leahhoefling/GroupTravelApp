@@ -3,6 +3,8 @@ import { Button, FormGroup, FormControl, ControlLabel, MenuItem, DropdownButton,
 import ApiManager from "../API/ApiManager";
 import "./SuggestionForm.css";
 import MyTripsCards from "../MyTripsPage/MyTripsCards";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -90,7 +92,7 @@ export default class SuggestionForm extends Component {
         ApiManager.postItem("suggestions", newSuggestion)
             .then(() => {
                 //redirects to "my trips" so they can see what they added
-                this.props.history.push('/mytrips')
+                // this.props.history.push('/mytrips')
             })
     };
 
@@ -162,14 +164,22 @@ export default class SuggestionForm extends Component {
                             type="url"
                         />
                     </FormGroup>
-                    <Button
-                        block
-                        bsSize="large"
-                        disabled={!this.validateForm()}
-                        type="submit"
+
+                    <Link
+                        className="button-link"
+                        to={{
+                            pathname: `/mytrips`,
+                        }}
                     >
-                        Add New Suggestion
-          </Button>
+                        <Button
+                            block
+                            bsSize="large"
+                            disabled={!this.validateForm()}
+                            type="submit">
+                            Add New Suggestion
+                            </Button>
+                    </Link>
+
                 </form>
             </div >
         );
