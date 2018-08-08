@@ -60,13 +60,6 @@
       "endDate": "2018-08-19",
       "userId": 1,
       "id": 11
-    },
-    {
-      "name": "cohort 26 - barberque",
-      "startDate": "2018-08-16",
-      "endDate": "2018-08-25",
-      "userId": 1,
-      "id": 12
     }
   ],
   "suggestions": [
@@ -179,6 +172,16 @@
       "userId": 4,
       "rank": 6,
       "id": 14
+    },
+    {
+      "name": "Visit Wineries",
+      "cost": "$25",
+      "description": "The wineries have tastings and charcuterie boards for us!",
+      "link": "https://www.santowines.gr/en/",
+      "groupId": 11,
+      "userId": 4,
+      "rank": 0,
+      "id": 15
     }
   ]
 }
