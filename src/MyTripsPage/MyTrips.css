@@ -17,3 +17,7 @@ div h1{
     margin: auto;
     padding: 2% 0% 0% 5%;
 }
+
+button a {
+    color: white;
+  }
