@@ -20,35 +20,45 @@ export default class ItineraryList extends Component {
         //this one takes the suggestions and grabs the group id attached to them and then sorts in order of ranks
         ApiManager.getSuggestionsForTrip("suggestions", groupId)
             .then(suggestions => {
-                console.log("suggestions", suggestions);
+                // console.log("suggestions", suggestions);
                 this.setState({ suggestions: suggestions })
             })
     }
 
 
-    handleClick = (argument) => {
-        const editedSuggestion = {
-            rank: this.state.rank
+    handleClick = (rank, id, argument) => {
+        const editedUpSuggestion = {
+            rank: parseInt(rank) + 1
         };
+        const editedDownSuggestion = {
+            rank: parseInt(rank) - 1
+        };
+        // console.log("argue", argument);
+        // console.log("rank", rank);
+        // console.log("id", id);
         let groupId = this.props.location.state.id;
 
-        console.log("sug id", this.state.suggestions);
 
         if (argument === "up") {
             // collectionName, itemId, theObject
-
-            ApiManager.patchItem("suggestions", groupId, editedSuggestion)
-
+            ApiManager.patchItem("suggestions", id, editedUpSuggestion)
                 .then(() => {
-                    this.setState(({ rank }) => ({
-                        rank: parseInt(rank) + 1
-                    }));
+                    //this one takes the suggestions and grabs the group id attached to them and then sorts in order of ranks
+                    ApiManager.getSuggestionsForTrip("suggestions", groupId)
+                        .then(suggestions => {
+                            // console.log("suggestions", suggestions);
+                            this.setState({ suggestions: suggestions })
+                        })
                 })
         } else {
             // collectionName, itemId, theObject
-            ApiManager.patchItem("suggestions", groupId, editedSuggestion)
-                .then((rank) => {
-                    this.setState({ rank: rank - 1 })
+            ApiManager.patchItem("suggestions", id, editedDownSuggestion)
+                .then(() => {
+                    //this one takes the suggestions and grabs the group id attached to them and then sorts in order of ranks
+                    ApiManager.getSuggestionsForTrip("suggestions", groupId)
+                        .then(suggestions => {
+                            this.setState({ suggestions: suggestions })
+                        })
                 })
         }
 
@@ -71,4 +81,5 @@ export default class ItineraryList extends Component {
 
 //thoughts:
 
-//I found where to get the ID for the suggestion but it still isnt patching
+//I found where to get the ID for the suggestion but it still isnt patching... maybe has something to do with my math
+//thinking I could make an addition and subtract function to call inside the set state... kinda like the MyTripsList RemDup function setup3

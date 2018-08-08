@@ -11,7 +11,7 @@ import "./Itinerary.css"
 export default class ItineraryCards extends Component {
 
     render() {
-        console.log("props", this.props);
+        // console.log("props", this.props);
 
         return (
             <div id={this.props.suggestion.groupId} className="card" style={{ width: `75rem` }}>
@@ -26,10 +26,10 @@ export default class ItineraryCards extends Component {
                     <h5 className="card-title">Points:</h5>
                     <p className="card-text">{this.props.suggestion.rank}</p>
                     <p>
-                        <Button bsStyle="primary" onClick={() => this.props.handleClick("up")}>UPVOTE</Button>
+                        <Button bsStyle="primary" onClick={() => this.props.handleClick(this.props.suggestion.rank, this.props.suggestion.id, "up")}>UPVOTE</Button>
                     </p>
                     <p>
-                        <Button bsStyle="danger" onClick={() => this.props.handleClick("down")}>DOWN-VOTE</Button>
+                        <Button bsStyle="danger" onClick={() => this.props.handleClick(this.props.suggestion.rank, this.props.suggestion.id, "down")}>DOWN-VOTE</Button>
                     </p>
                 </div>
             </div >
