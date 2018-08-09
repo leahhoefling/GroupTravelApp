@@ -219,6 +219,16 @@
       "userId": 1,
       "rank": 0,
       "id": 18
+    },
+    {
+      "name": "its a small world ride",
+      "cost": "0",
+      "description": "calm classic ride",
+      "link": "",
+      "groupId": 7,
+      "userId": 1,
+      "rank": 0,
+      "id": 19
     }
   ]
 }

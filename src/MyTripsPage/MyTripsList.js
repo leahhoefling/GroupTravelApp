@@ -92,11 +92,3 @@ export default class MyTripsList extends Component {
         )
     }
 }
-
-
-
-//heres some thoughts of where I left off:
-//1) suggestion form isnt posting to DB and adding it to my trips
-// 2) basically trips youve made suggestions to arent posting to my trips DB
-//3) soooo i dont think the posting issue has to do with the API calls above because when i commented them out, the posting still didnt work
-//4) I think it has something to do with me not having a return or anything in my POST call on the handleSubmit fn

@@ -32,28 +32,43 @@ export default props => {
                 </h1> */}
 
                 </div>
-
+                <div id="bothCTA">
+                    <div id=
+                        "CTA">
+                        <h3>Where is your group off to?</h3>
+                        <Button bsSize="large">
+                            <Link
+                                className="button-link"
+                                to={{
+                                    pathname: `/addgroup`,
+                                }}
+                            >
+                                Start New Group Trip
+        </Link>
+                        </Button>
+                    </div>
+                </div>
                 <div id=
                     "CTA">
-                    <h3>Where is your group off to?</h3>
+                    <h3>Add a New Suggestion for Your Group Trip!</h3>
                     <Button bsSize="large">
                         <Link
                             className="button-link"
                             to={{
-                                pathname: `/addgroup`,
+                                pathname: `/suggestion`,
                             }}
                         >
-                            Start New Group Trip
+                            Add Suggestion
         </Link>
                     </Button>
                 </div>
             </div>
 
-            <div id="form">
+            {/* <div id="form">
                 <SuggestionForm />
-            </div>
+            </div> */}
 
-        </React.Fragment>
+        </React.Fragment >
 
 
     )
