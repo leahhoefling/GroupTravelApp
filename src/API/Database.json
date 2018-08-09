@@ -67,6 +67,13 @@
       "endDate": "2018-10-07",
       "userId": 2,
       "id": 12
+    },
+    {
+      "name": "test group",
+      "startDate": "2018-08-15",
+      "endDate": "2018-08-24",
+      "userId": 1,
+      "id": 13
     }
   ],
   "suggestions": [
@@ -229,6 +236,16 @@
       "userId": 1,
       "rank": 0,
       "id": 19
+    },
+    {
+      "name": "add test",
+      "cost": "k",
+      "description": "k",
+      "link": "",
+      "groupId": 13,
+      "userId": 1,
+      "rank": 0,
+      "id": 20
     }
   ]
 }
