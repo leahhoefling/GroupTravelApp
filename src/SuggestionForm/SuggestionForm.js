@@ -96,10 +96,6 @@ export default class SuggestionForm extends Component {
                 // return ApiManager.getAll("suggestions");// still not working with a return
             })
     };
-
-
-
-
     render() {
         // console.log("this.state.groups", this.state);
 
@@ -165,13 +161,6 @@ export default class SuggestionForm extends Component {
                             type="url"
                         />
                     </FormGroup>
-
-                    {/* <Link
-                        className="button-link"
-                        to={{
-                            pathname: `/mytrips`,
-                        }}
-                    > */}
                     <Button
                         block
                         bsSize="large"
@@ -179,11 +168,8 @@ export default class SuggestionForm extends Component {
                         type="submit">
                         Add New Suggestion
                             </Button>
-                    {/* </Link> */}
-
                 </form>
             </div >
         );
     }
 }
-//thoughts: maybe the button links to the /mytrips page before it can POST.... nope still doesnt post

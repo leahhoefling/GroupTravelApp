@@ -199,6 +199,26 @@
       "userId": 1,
       "rank": 0,
       "id": 16
+    },
+    {
+      "name": "why u no work",
+      "cost": "k",
+      "description": "k",
+      "link": "",
+      "groupId": 7,
+      "userId": 1,
+      "rank": 0,
+      "id": 17
+    },
+    {
+      "name": "tower of terror",
+      "cost": "0",
+      "description": "scary af",
+      "link": "",
+      "groupId": 7,
+      "userId": 1,
+      "rank": 0,
+      "id": 18
     }
   ]
 }
