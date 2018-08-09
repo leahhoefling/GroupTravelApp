@@ -9,7 +9,8 @@ export default class MyTripsList extends Component {
         super();
         this.state = {
             groups: [],
-            suggestions: []
+            suggestions: [],
+            allTrips: []
         };
     }
 
@@ -17,30 +18,46 @@ export default class MyTripsList extends Component {
         let userId = ApiManager.getIdofCurrentUser()
         // console.log("user", userId);
 
-        ApiManager.getUserTrip("groups", userId)
-            .then(groups => {
-                console.log("groups", groups);
-                this.setState({ groups: groups })
-            }).then((suggestions) => {
+        // ApiManager.getUserTrip("groups", userId)
+        //     .then(groups => {
+        //         console.log("groups", groups);
+        //         this.setState({ groups: groups })
+        //     })
+        //     .then((suggestions => {
+        //         console.log("suggestions after .then", suggestions);// suggestions is undefined
+        //         ApiManager.getUserSuggestionTrip(userId)
+        //             .then(allTrips => {
+        //                 allTrips.forEach(trip => {
+        //                     // console.log("trip", trip);
 
-                ApiManager.getUserSuggestionTrip(userId)
-                    .then(allTrips => {
-                        allTrips.forEach(trip => {
-                            console.log("trip", trip);
+        //                     if (trip.userId !== userId) {
+        //                         // console.log("alltrips user id", allTrips.userId);
+        //                         console.log("userId", userId);
 
-                            if (trip.userId !== userId) {
-                                // console.log("alltrips", allTrips.userId);
-                                console.log("userId", userId);
+        //                         let remDup = this.removeDuplicates(allTrips, "groupId")
+        //                         // console.log("all trips", allTrips);
 
-                                let remDup = this.removeDuplicates(allTrips, "groupId")
-                                console.log("all trips", allTrips);
+        //                         console.log("suggestions in foreach", suggestions);//console not getting to this
+        //                         this.setState({ suggestions: remDup })
+        //                     }
+        //                 })
 
-                                // console.log("suggestions", suggestions);
-                                this.setState({ suggestions: remDup })
-                            }
-                        })
+        //             })
 
-                    })
+        //     }))
+        //do a return on the promise. all then return the arrays-- or an obj that groups is array
+        Promise.all([ApiManager.getUserTrip("groups", userId), ApiManager.getUserSuggestionTrip(userId)])
+            .then((responses) => {
+                console.log(responses);
+                let myGroups = responses[0]
+                let mySuggestions = this.removeDuplicates(responses[1], "groupId")
+                console.log(mySuggestions);
+
+                let myGroupIds = myGroups.map(group => group.id);
+                console.log(myGroupIds);
+
+                let filteredSuggestions = mySuggestions.filter(suggestion => !myGroupIds.includes(suggestion.group.id))
+                console.log(filteredSuggestions);
 
             })
 
@@ -81,4 +98,7 @@ export default class MyTripsList extends Component {
 
 
 //heres some thoughts of where I left off:
-//1) I just realized my duplicates function doesnt work for checking between the groups array and the suggestions groups array
+//1) suggestion form isnt posting to DB and adding it to my trips
+// 2) basically trips youve made suggestions to arent posting to my trips DB
+//3) soooo i dont think the posting issue has to do with the API calls above because when i commented them out, the posting still didnt work
+//4) I think it has something to do with me not having a return or anything in my POST call on the handleSubmit fn

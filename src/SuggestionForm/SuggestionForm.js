@@ -91,8 +91,7 @@ export default class SuggestionForm extends Component {
 
         ApiManager.postItem("suggestions", newSuggestion)
             .then(() => {
-                //redirects to "my trips" so they can see what they added
-                // this.props.history.push('/mytrips')
+                return ApiManager.getAll("suggestions");// still not working with a return
             })
     };
 
@@ -185,3 +184,4 @@ export default class SuggestionForm extends Component {
         );
     }
 }
+//thoughts: maybe the button links to the /mytrips page before it can POST.... nope still doesnt post
