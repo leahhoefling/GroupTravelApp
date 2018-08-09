@@ -47,9 +47,9 @@ export default class SuggestionForm extends Component {
         this.setState({
             [event.target.id]: event.target.value
         });
-        console.log("event.target.id", event.target.id);
-        console.log("value", event.target.value);
-        console.log("event.target", event.target);
+        // console.log("event.target.id", event.target.id);
+        // console.log("value", event.target.value);
+        // console.log("event.target", event.target);
     };
 
     handleDropdown = (undefined, event) => {
@@ -91,7 +91,9 @@ export default class SuggestionForm extends Component {
 
         ApiManager.postItem("suggestions", newSuggestion)
             .then(() => {
-                return ApiManager.getAll("suggestions");// still not working with a return
+                //redirects to "my trips" so they can see what they added
+                this.props.history.push('/mytrips')
+                // return ApiManager.getAll("suggestions");// still not working with a return
             })
     };
 
@@ -164,20 +166,20 @@ export default class SuggestionForm extends Component {
                         />
                     </FormGroup>
 
-                    <Link
+                    {/* <Link
                         className="button-link"
                         to={{
                             pathname: `/mytrips`,
                         }}
-                    >
-                        <Button
-                            block
-                            bsSize="large"
-                            disabled={!this.validateForm()}
-                            type="submit">
-                            Add New Suggestion
+                    > */}
+                    <Button
+                        block
+                        bsSize="large"
+                        disabled={!this.validateForm()}
+                        type="submit">
+                        Add New Suggestion
                             </Button>
-                    </Link>
+                    {/* </Link> */}
 
                 </form>
             </div >
