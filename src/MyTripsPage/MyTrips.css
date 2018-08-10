@@ -1,14 +1,19 @@
-.card{
-    border-style: solid;
+.panel{
+    /* border-style: solid;
     border-width: 2pt;
     border-color: black;
-    border-radius: 2%;
+    border-radius: 2%; */
     padding: 2%;
     text-align: center;
     margin: 5% auto;
     max-width: 50rem;
 }
-
+.panel-default > .panel-heading{
+    background-image: none;
+    /* background-color: #bee3db; */
+    /* background-color: rgba(190, 227, 219, 0.45); */
+    background: linear-gradient(rgba(190, 227, 219, 1), rgba(190, 227, 219, 0.5));
+}
 .card-title {
     font-weight: bold;
 }
