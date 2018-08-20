@@ -20,10 +20,10 @@ export default class MyTripsCards extends Component {
                 </div>
                 <div class="panel-body">
 
-                    <h5 className="card-title">Start Date of Trip:</h5>
-                    <p className="card-text">{this.props.mytrip.startDate}</p>
-                    <h5 className="card-title">End Date of Trip:</h5>
-                    <p className="card-text">{this.props.mytrip.endDate}</p>
+                    <h5 className="panel-title">Start Date of Trip:</h5>
+                    <p className="panel-text">{this.props.mytrip.startDate}</p>
+                    <h5 className="panel-title">End Date of Trip:</h5>
+                    <p className="panel-text">{this.props.mytrip.endDate}</p>
 
                     <p>
                         <Button bsStyle="primary">

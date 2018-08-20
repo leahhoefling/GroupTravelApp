@@ -7,6 +7,8 @@
     text-align: center;
     margin: 5% auto;
     max-width: 50rem;
+    align-items: center;
+    flex: grid;
 }
 .panel-default > .panel-heading{
     background-image: none;

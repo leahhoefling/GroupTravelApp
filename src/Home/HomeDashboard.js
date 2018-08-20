@@ -34,8 +34,8 @@ export default props => {
                 </div>
                 <div id="bothCTA">
                     <div id=
-                        "CTA">
-                        <h3>Where is your group off to?</h3>
+                        "CTAone">
+                        <h3>Where is your group traveling to?</h3>
                         <Button bsSize="large">
                             <Link
                                 className="button-link"
@@ -47,20 +47,21 @@ export default props => {
         </Link>
                         </Button>
                     </div>
-                </div>
-                <div id=
-                    "CTA">
-                    <h3>Add a New Suggestion for Your Group Trip!</h3>
-                    <Button bsSize="large">
-                        <Link
-                            className="button-link"
-                            to={{
-                                pathname: `/suggestion`,
-                            }}
-                        >
-                            Add Suggestion
+
+                    <div id=
+                        "CTAtwo">
+                        <h3>Add a New Suggestion for Your Group Trip!</h3>
+                        <Button bsSize="large">
+                            <Link
+                                className="button-link"
+                                to={{
+                                    pathname: `/suggestion`,
+                                }}
+                            >
+                                Add Suggestion
         </Link>
-                    </Button>
+                        </Button>
+                    </div>
                 </div>
             </div>
 
