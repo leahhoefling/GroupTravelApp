@@ -36,7 +36,7 @@ export default props => {
                     <div id=
                         "CTAone">
                         <h3>Where is your group traveling to?</h3>
-                        <Button bsSize="large">
+                        <Button id="ctaButton" bsSize="large">
                             <Link
                                 className="button-link"
                                 to={{
@@ -51,7 +51,7 @@ export default props => {
                     <div id=
                         "CTAtwo">
                         <h3>Add a New Suggestion for Your Group Trip!</h3>
-                        <Button bsSize="large">
+                        <Button id="ctaButton" bsSize="large">
                             <Link
                                 className="button-link"
                                 to={{

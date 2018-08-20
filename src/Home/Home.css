@@ -41,7 +41,7 @@
     margin: 5% ;
     background-color: #ffd6ba;
     box-shadow: 2px 2px 18px #888888;
-    height: 12rem;
+    height: 16rem;
 }
 
   #CTAtwo {
@@ -54,7 +54,7 @@
     margin: 5%;
     background-color: #ffd6ba;
     box-shadow: 2px 2px 18px #888888;
-    height: 12rem;
+    height: 16rem;
   }
 
   #bothCTA {
@@ -70,5 +70,8 @@
 
 form h2 {
     padding: 0% 0% 4% 0%;
+}
 
+#ctaButton {
+    margin: 2%;
 }
