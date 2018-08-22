@@ -70,8 +70,8 @@
     },
     {
       "name": "Cohort 26- NYC",
-      "startDate": "2018-08-11",
-      "endDate": "2018-08-18",
+      "startDate": "2018-08-22",
+      "endDate": "2018-08-25",
       "userId": 1,
       "id": 13
     }
@@ -84,7 +84,7 @@
       "link": "https://hiketablemountain.co.za/",
       "userId": 1,
       "groupId": 9,
-      "rank": 2,
+      "rank": 0,
       "id": 1
     },
     {
@@ -94,7 +94,7 @@
       "link": "http://sharklady.co.za/",
       "userId": 1,
       "groupId": 9,
-      "rank": 5,
+      "rank": 1,
       "id": 2
     },
     {
@@ -104,7 +104,7 @@
       "link": "http://sealsnorkeling.com/",
       "userId": 2,
       "groupId": 9,
-      "rank": 3,
+      "rank": 0,
       "id": 3
     },
     {
@@ -113,7 +113,7 @@
       "description": "It is like snowboarding... but on a sand dune!",
       "link": "http://sandboardingcapetown.com/",
       "userId": 2,
-      "rank": 0,
+      "rank": -1,
       "groupId": 9,
       "id": 7
     },
@@ -134,7 +134,7 @@
       "link": "http://www.blog.visitgreece.gr/a-daredevils-guide-to-hiking-cliff-jumping-in-santorini/",
       "groupId": 11,
       "userId": 1,
-      "rank": 0,
+      "rank": 1,
       "id": 11
     },
     {
@@ -144,13 +144,13 @@
       "link": "http://www.nikolascave.gr/en/",
       "groupId": 11,
       "userId": 1,
-      "rank": 0,
+      "rank": 2,
       "id": 12
     },
     {
-      "name": "Tubing the black river",
+      "name": "Tube the Black River",
       "cost": "$80",
-      "description": "Takes 6hrs itll be fun!!",
+      "description": "gonna be fun!",
       "link": "https://www.blackwatertubing.net/",
       "groupId": 9,
       "userId": 1,
