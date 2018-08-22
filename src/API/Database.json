@@ -69,9 +69,9 @@
       "id": 12
     },
     {
-      "name": "test group",
-      "startDate": "2018-08-15",
-      "endDate": "2018-08-24",
+      "name": "Cohort 26- NYC",
+      "startDate": "2018-08-22",
+      "endDate": "2018-08-25",
       "userId": 1,
       "id": 13
     }
@@ -84,7 +84,7 @@
       "link": "https://hiketablemountain.co.za/",
       "userId": 1,
       "groupId": 9,
-      "rank": 1,
+      "rank": 0,
       "id": 1
     },
     {
@@ -94,7 +94,7 @@
       "link": "http://sharklady.co.za/",
       "userId": 1,
       "groupId": 9,
-      "rank": 2,
+      "rank": 1,
       "id": 2
     },
     {
@@ -104,7 +104,7 @@
       "link": "http://sealsnorkeling.com/",
       "userId": 2,
       "groupId": 9,
-      "rank": 2,
+      "rank": 0,
       "id": 3
     },
     {
@@ -113,7 +113,7 @@
       "description": "It is like snowboarding... but on a sand dune!",
       "link": "http://sandboardingcapetown.com/",
       "userId": 2,
-      "rank": 0,
+      "rank": -1,
       "groupId": 9,
       "id": 7
     },
@@ -121,40 +121,20 @@
       "name": "Meet lots of dog friends",
       "cost": "$0",
       "description": "Make friends and play with them",
-      "link": "",
-      "userId": 1,
+      "link": "n/a",
+      "userId": 3,
       "rank": 0,
       "id": 8,
       "groupId": 8
     },
     {
-      "name": "Visit Stellenbosch Vineyards",
-      "cost": "$60",
-      "description": "Some of the top wine in the world comes from this region! Let's bring a picnic and go wine tasting.",
-      "link": "http://www.wineroute.co.za/",
-      "groupId": 9,
-      "userId": 1,
-      "rank": 0,
-      "id": 9
-    },
-    {
-      "name": "Sunrise at Lion's Head Mountain",
-      "cost": "$0",
-      "description": "We can have a 360 degree view of Cape Town while the sunrises over it!",
-      "link": "https://www.tripadvisor.com/ShowUserReviews-g312659-d481585-r308635775-Lion_s_Head-Cape_Town_Central_Western_Cape.html",
-      "groupId": 9,
-      "userId": 1,
-      "rank": 3,
-      "id": 10
-    },
-    {
       "name": "Cliff Jump in Santorini",
       "cost": "$0",
       "description": "Sisterhood of the Traveling Pants did it... and so should we!",
-      "link": "",
+      "link": "http://www.blog.visitgreece.gr/a-daredevils-guide-to-hiking-cliff-jumping-in-santorini/",
       "groupId": 11,
       "userId": 1,
-      "rank": 0,
+      "rank": 1,
       "id": 11
     },
     {
@@ -164,88 +144,18 @@
       "link": "http://www.nikolascave.gr/en/",
       "groupId": 11,
       "userId": 1,
-      "rank": 0,
+      "rank": 2,
       "id": 12
     },
     {
-      "name": "Visit Animal Kingdom",
-      "cost": "$130",
-      "description": "We can go on the Everest Ride and see lots of animals!",
-      "link": "",
-      "groupId": 7,
+      "name": "Tube the Black River",
+      "cost": "$80",
+      "description": "gonna be fun!",
+      "link": "https://www.blackwatertubing.net/",
+      "groupId": 9,
       "userId": 1,
-      "rank": 0,
+      "rank": 1,
       "id": 13
-    },
-    {
-      "name": "Watch Sunset from Oia",
-      "cost": "$0",
-      "description": "The Sun sets around 8pm when we're there!",
-      "link": "https://www.tripadvisor.com/Attraction_Review-g482941-d3369820-Reviews-Sunset_in_Oia-Oia_Santorini_Cyclades_South_Aegean.html",
-      "groupId": 11,
-      "userId": 4,
-      "rank": 0,
-      "id": 14
-    },
-    {
-      "name": "Visit Wineries",
-      "cost": "$25",
-      "description": "The wineries have tastings and charcuterie boards for us!",
-      "link": "https://www.santowines.gr/en/",
-      "groupId": 11,
-      "userId": 4,
-      "rank": 0,
-      "id": 15
-    },
-    {
-      "name": "Ride ATVs",
-      "cost": "$30",
-      "description": "We can rent ATVs and ride them to the beaches across the island.",
-      "link": "https://www.santorinibikerental.com/",
-      "groupId": 11,
-      "userId": 1,
-      "rank": 0,
-      "id": 16
-    },
-    {
-      "name": "why u no work",
-      "cost": "k",
-      "description": "k",
-      "link": "",
-      "groupId": 7,
-      "userId": 1,
-      "rank": 0,
-      "id": 17
-    },
-    {
-      "name": "tower of terror",
-      "cost": "0",
-      "description": "scary af",
-      "link": "",
-      "groupId": 7,
-      "userId": 1,
-      "rank": 0,
-      "id": 18
-    },
-    {
-      "name": "its a small world ride",
-      "cost": "0",
-      "description": "calm classic ride",
-      "link": "",
-      "groupId": 7,
-      "userId": 1,
-      "rank": 0,
-      "id": 19
-    },
-    {
-      "name": "add test",
-      "cost": "k",
-      "description": "k",
-      "link": "",
-      "groupId": 13,
-      "userId": 1,
-      "rank": 0,
-      "id": 20
     }
   ]
 }
