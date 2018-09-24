@@ -94,7 +94,7 @@
       "link": "http://sharklady.co.za/",
       "userId": 1,
       "groupId": 9,
-      "rank": 2,
+      "rank": 4,
       "id": 2
     },
     {
@@ -154,7 +154,7 @@
       "link": "",
       "groupId": 11,
       "userId": 1,
-      "rank": 0,
+      "rank": 2,
       "id": 11
     },
     {
@@ -164,7 +164,7 @@
       "link": "http://www.nikolascave.gr/en/",
       "groupId": 11,
       "userId": 1,
-      "rank": 0,
+      "rank": 3,
       "id": 12
     },
     {
@@ -184,7 +184,7 @@
       "link": "https://www.tripadvisor.com/Attraction_Review-g482941-d3369820-Reviews-Sunset_in_Oia-Oia_Santorini_Cyclades_South_Aegean.html",
       "groupId": 11,
       "userId": 4,
-      "rank": 0,
+      "rank": -1,
       "id": 14
     },
     {
@@ -194,7 +194,7 @@
       "link": "https://www.santowines.gr/en/",
       "groupId": 11,
       "userId": 4,
-      "rank": 0,
+      "rank": 1,
       "id": 15
     },
     {
@@ -204,7 +204,7 @@
       "link": "https://www.santorinibikerental.com/",
       "groupId": 11,
       "userId": 1,
-      "rank": 0,
+      "rank": -1,
       "id": 16
     },
     {

@@ -33,9 +33,6 @@ export default class ItineraryList extends Component {
         const editedDownSuggestion = {
             rank: parseInt(rank) - 1
         };
-        // console.log("argue", argument);
-        // console.log("rank", rank);
-        // console.log("id", id);
         let groupId = this.props.location.state.id;
 
 

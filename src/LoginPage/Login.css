@@ -22,20 +22,39 @@
   margin: auto;
   width: 50%;
   padding: 4%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }
 
 #loginWelcome {
   margin: 0 20% 20% 0;
+  margin: 5% auto 0%;
+  padding: 2% 3% 2% 3%;
+  text-align: center;
 }
 
 #registerWelcome {
   margin: 0 20% 20% 0;
+  margin: 5% auto 0%;
+  padding: 2% 3% 2% 3%;
+  text-align: center;
+}
+
+#registerWelcome > a{
+  color: darkslategray;
+}
+
+#loginWelcome > a{
+  color: darkslategray;
 }
 
 #welcomeLogo {
   margin: auto;
   width: 100%;
   align-content: center;
+display: flex;
 }
 
 #checkbox {
