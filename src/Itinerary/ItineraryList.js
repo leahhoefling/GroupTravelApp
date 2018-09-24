@@ -20,7 +20,6 @@ export default class ItineraryList extends Component {
         //this one takes the suggestions and grabs the group id attached to them and then sorts in order of ranks
         ApiManager.getSuggestionsForTrip("suggestions", groupId)
             .then(suggestions => {
-                // console.log("suggestions", suggestions);
                 this.setState({ suggestions: suggestions })
             })
     }

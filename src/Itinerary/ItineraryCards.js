@@ -11,7 +11,6 @@ import "./Itinerary.css"
 export default class ItineraryCards extends Component {
 
     render() {
-        // console.log("props", this.props);
 
         return (
             <div id={this.props.suggestion.groupId} className="card" style={{ width: `75rem` }}>

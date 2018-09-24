@@ -49,33 +49,6 @@ export default class Login extends Component {
         }
 
       })
-    // .then(() => {
-    //   const checkbox = document.getElementById("checkbox");
-    //   console.log(checkbox);
-    //   if (checkbox.checked) {
-    //     if (this.state.userId) {
-    //       localStorage.setItem(
-    //         "credentials",
-    //         JSON.stringify({
-    //           email: this.state.email,
-    //           password: this.state.password,
-    //           userId: this.state.userId
-    //         })
-    //       );
-    //     }
-    //   } else {
-    //     if (this.state.userId) {
-    //       sessionStorage.setItem(
-    //         "credentials",
-    //         JSON.stringify({
-    //           email: this.state.email,
-    //           password: this.state.password,
-    //           userId: this.state.userId
-    //         })
-    //       );
-    //     }
-    //   }
-    // });
   };
 
   render() {
