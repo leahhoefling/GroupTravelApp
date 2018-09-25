@@ -50,6 +50,12 @@
   color: darkslategray;
 }
 
+#welcomeLogo {
+  margin: auto;
+  width: 100%;
+  align-content: center;
+}
+
 .page-header {
   text-align: center;
 }
@@ -57,3 +63,4 @@
 #checkbox {
   margin: 5pt;
 }
+

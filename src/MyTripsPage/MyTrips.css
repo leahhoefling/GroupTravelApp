@@ -1,12 +1,13 @@
 .card{
-    border-style: solid;
-    border-width: 2pt;
-    border-color: black;
-    border-radius: 2%;
+    /* border-style: solid; */
+    /* border-width: 2pt;
+    border-color: black; */
+    /* border-radius: 2%; */
     padding: 2%;
     text-align: center;
     margin: 5% auto;
     max-width: 50rem;
+    background-color: #f0f5f5;
 }
 
 .card-title {
