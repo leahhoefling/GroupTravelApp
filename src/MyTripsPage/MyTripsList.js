@@ -40,7 +40,7 @@ export default class MyTripsList extends Component {
                 this.setState({ allCombined: allCombined })
             })
     }
-    //here's where I got this code: https://ilikekillnerds.com/2016/05/removing-duplicate-objects-array-property-name-javascript/
+    //here's where I researched to get this code: https://ilikekillnerds.com/2016/05/removing-duplicate-objects-array-property-name-javascript/
     removeDuplicates = (myArr, prop) => {
         return myArr.filter((obj, pos, arr) => {
             return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
@@ -54,8 +54,7 @@ export default class MyTripsList extends Component {
                 {
                     this.state.allCombined.groups.map(mytrip =>
                         <MyTripsCards key={mytrip.id} mytrip={mytrip} />
-                        // {/* {mytrip.name} */ }
-                        // </MyTripsCards>
+
                     )
                 }
 

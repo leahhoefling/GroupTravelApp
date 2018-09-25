@@ -32,7 +32,6 @@ export default class SuggestionForm extends Component {
             .then((groups) => {
                 console.log("groupS", groups);
                 this.setState({ groups: groups })
-                // console.log("group name", dropdownGroupName);
             })
     }
 
@@ -47,9 +46,6 @@ export default class SuggestionForm extends Component {
         this.setState({
             [event.target.id]: event.target.value
         });
-        // console.log("event.target.id", event.target.id);
-        // console.log("value", event.target.value);
-        // console.log("event.target", event.target);
     };
 
     handleDropdown = (undefined, event) => {
@@ -73,7 +69,6 @@ export default class SuggestionForm extends Component {
         } else {
             signedInUser = signedInUser.user;
         }
-        // console.log("signed user", signedInUser);
 
         console.log(event);
 
@@ -85,9 +80,8 @@ export default class SuggestionForm extends Component {
             groupId: this.state.tripId,
             userId: ApiManager.getIdofCurrentUser(),
             rank: this.state.rank
-
         }
-        console.log('newSuggestion', newSuggestion);
+
 
         ApiManager.postItem("suggestions", newSuggestion)
             .then(() => {
@@ -97,7 +91,6 @@ export default class SuggestionForm extends Component {
             })
     };
     render() {
-        // console.log("this.state.groups", this.state);
 
         return (
             <div className="suggestion">
@@ -106,7 +99,6 @@ export default class SuggestionForm extends Component {
                     <FormGroup controlId="trip" bsSize="large"
                         value={this.state.trip}
                     >
-                        {/* <p>trip state: {this.state.trip}</p> */}
                         <ControlLabel>Select Which Trip You're Adding a Suggestion To:</ControlLabel>
 
                         <ButtonToolbar >
@@ -124,7 +116,7 @@ export default class SuggestionForm extends Component {
                     <FormGroup controlId="name" bsSize="large">
                         <ControlLabel>Suggestion Name</ControlLabel>
                         <FormControl
-                            //autofocus gives attn to the email input for the user to know where to type
+                            //autofocus gives attn to the suggestion input for the user to know where to type
                             autoFocus
                             type="text"
                             placeholder="(e.g., Visit the Eiffel Tower)"

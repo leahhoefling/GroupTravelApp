@@ -11,7 +11,6 @@ export default props => {
         <React.Fragment>
             <div>
                 <div>
-                    {/* <Col md={6} offset={{ md: 3 }} */}
 
                     {/* look into "hero" headers */}
                     <Image id="welcomeImg"
@@ -27,9 +26,6 @@ export default props => {
                         src="https://s19.postimg.cc/d7kexd5tv/MAjoritywins.png"
                         circle
                     />
-                    {/* <h1>
-                        Welcome to Majority Wins!
-                </h1> */}
 
                 </div>
                 <div id="bothCTA">
@@ -64,10 +60,6 @@ export default props => {
                     </div>
                 </div>
             </div>
-
-            {/* <div id="form">
-                <SuggestionForm />
-            </div> */}
 
         </React.Fragment >
 

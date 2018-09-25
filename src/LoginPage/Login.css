@@ -21,16 +21,33 @@
 #welcomeButtons {
   margin: auto;
   width: 50%;
-  padding: 4%;
+  padding: 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }
 
 #loginWelcome {
   margin: 0 20% 20% 0;
-  color: black;
+  margin: 5% auto 0%;
+  padding: 2% 3% 2% 3%;
+  text-align: center;
 }
 
 #registerWelcome {
   margin: 0 20% 20% 0;
+  margin: 5% auto 0%;
+  padding: 2% 3% 2% 3%;
+  text-align: center;
+}
+
+#registerWelcome > a{
+  color: darkslategray;
+}
+
+#loginWelcome > a{
+  color: darkslategray;
 }
 
 #welcomeLogo {
@@ -39,6 +56,11 @@
   align-content: center;
 }
 
+.page-header {
+  text-align: center;
+}
+
 #checkbox {
   margin: 5pt;
 }
+

@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 export default props => {
   return (
     <React.Fragment>
-      <PageHeader>
+      <PageHeader class="welcomeHeader">
         Welcome to Majority Wins, a group travel planning app!
       </PageHeader>
-      <h2><small>Please Register or Sign-In</small>
+      <h2><small>Let's Get Started!</small>
       </h2>
       <div id="welcomeButtons">
         <Button id="loginWelcome" >
@@ -29,15 +29,6 @@ export default props => {
             Register
             </Link>
         </Button>
-      </div>
-      <div>
-        <Col xs={6} md={4}>
-          <Image id="welcomeLogo"
-            src="https://s19.postimg.cc/d7kexd5tv/MAjoritywins.png"
-            circle
-            responsive
-          />
-        </Col>
       </div>
     </React.Fragment>
 

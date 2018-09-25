@@ -17,12 +17,6 @@
       "email": "harpergwin@gmail.com",
       "password": "pass",
       "id": 3
-    },
-    {
-      "name": "Leah Heck",
-      "email": "leahmheck@gmail.com",
-      "password": "pass",
-      "id": 4
     }
   ],
   "groups": [
@@ -67,13 +61,6 @@
       "endDate": "2018-10-07",
       "userId": 2,
       "id": 12
-    },
-    {
-      "name": "Cohort 26- NYC",
-      "startDate": "2018-08-22",
-      "endDate": "2018-08-25",
-      "userId": 1,
-      "id": 13
     }
   ],
   "suggestions": [
@@ -94,7 +81,7 @@
       "link": "http://sharklady.co.za/",
       "userId": 1,
       "groupId": 9,
-      "rank": 1,
+      "rank": 4,
       "id": 2
     },
     {
@@ -134,7 +121,7 @@
       "link": "http://www.blog.visitgreece.gr/a-daredevils-guide-to-hiking-cliff-jumping-in-santorini/",
       "groupId": 11,
       "userId": 1,
-      "rank": 1,
+      "rank": 2,
       "id": 11
     },
     {
@@ -156,6 +143,56 @@
       "userId": 1,
       "rank": 1,
       "id": 13
+    },
+    {
+      "name": "Watch Sunset from Oia",
+      "cost": "$0",
+      "description": "The Sun sets around 8pm when we're there!",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g482941-d3369820-Reviews-Sunset_in_Oia-Oia_Santorini_Cyclades_South_Aegean.html",
+      "groupId": 11,
+      "userId": 4,
+      "rank": -1,
+      "id": 14
+    },
+    {
+      "name": "Visit Wineries",
+      "cost": "$25",
+      "description": "The wineries have tastings and charcuterie boards for us!",
+      "link": "https://www.santowines.gr/en/",
+      "groupId": 11,
+      "userId": 4,
+      "rank": 1,
+      "id": 15
+    },
+    {
+      "name": "Ride ATVs",
+      "cost": "$30",
+      "description": "We can rent ATVs and ride them to the beaches across the island.",
+      "link": "https://www.santorinibikerental.com/",
+      "groupId": 11,
+      "userId": 1,
+      "rank": -1,
+      "id": 16
+    },
+    {
+      "name": "tower of terror",
+      "cost": "0",
+      "description": "scary af",
+      "link": "",
+      "groupId": 7,
+      "userId": 1,
+      "rank": 0,
+      "id": 18
+    },
+    {
+      "name": "its a small world ride",
+      "cost": "0",
+      "description": "calm classic ride",
+      "link": "",
+      "groupId": 7,
+      "userId": 1,
+      "rank": 0,
+      "id": 19
     }
   ]
 }

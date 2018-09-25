@@ -1,21 +1,11 @@
-.panel{
-    /* border-style: solid;
-    border-width: 2pt;
-    border-color: black;
-    border-radius: 2%; */
+.card{
     padding: 2%;
     text-align: center;
     margin: 5% auto;
     max-width: 50rem;
-    align-items: center;
-    flex: grid;
+    background-color: #f0f5f5;
 }
-.panel-default > .panel-heading{
-    background-image: none;
-    /* background-color: #bee3db; */
-    /* background-color: rgba(190, 227, 219, 0.45); */
-    background: linear-gradient(rgba(190, 227, 219, 1), rgba(190, 227, 219, 0.5));
-}
+
 .card-title {
     font-weight: bold;
 }
