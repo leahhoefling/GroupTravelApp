@@ -14,7 +14,7 @@ export default class MyTripsCards extends Component {
 
     render() {
         return (
-            <div class="panel panel-default">
+            <div class="panel panel-default" className="card">
                 <div class="panel-heading">
                     <h3 class="panel-title">{this.props.mytrip.name}</h3>
                 </div>
