@@ -19,11 +19,13 @@ This is my Front-End Capstone for Nashville Software School, and I hope you enjo
 - [X] [JSON Server](https://github.com/typicode/json-server)
 - [X] [React-Bootstrap](https://react-bootstrap.github.io/)
 
-# Try it out
+# View a Demo of Majority Wins!
 
-<!-- Visit https://galaxy-game-blog.firebaseapp.com/#!/home to try it out yourself
+[![Live Demo of Majority Wins](https://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](https://youtu.be/WlMO4efi_q4)
 
-~ or ~ -->
+Visit https://youtu.be/WlMO4efi_q4 to view the live demo.
+
+~ or ~
 
 Testing Locally
 ----------------------------------------
