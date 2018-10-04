@@ -21,7 +21,7 @@ This is my Front-End Capstone for Nashville Software School, and I hope you enjo
 
 # View a Demo of Majority Wins!
 
-[![Live Demo of Majority Wins](https://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](https://youtu.be/WlMO4efi_q4)
+[![Live Demo of Majority Wins][Screen_Shot_2018-10-04_at_12.19.23_AM.jpg](https://postimg.cc/F7V8Cf9q)](https://youtu.be/WlMO4efi_q4)
 
 Visit https://youtu.be/WlMO4efi_q4 to view the live demo.
 
