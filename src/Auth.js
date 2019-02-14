@@ -10,7 +10,7 @@ class Auth {
             clientID: AUTH_CONFIG.clientID,
             redirectUri: 'http://localhost:3000/callback',
             responseType: 'id_token',
-            scope: 'openid profile'
+            scope: 'openid profile email'
         });
 
         this.getProfile = this.getProfile.bind(this);
