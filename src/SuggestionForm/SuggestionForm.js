@@ -27,7 +27,6 @@ export default class SuggestionForm extends Component {
     }
 
     componentDidMount() {
-        let dropdownGroupName;
         ApiManager.getAll("groups")
             .then((groups) => {
                 console.log("groupS", groups);

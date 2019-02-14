@@ -1,9 +1,15 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Navbar, Nav, Image } from 'react-bootstrap';
 import "./NavBar.css"
+import auth0Client from '../Auth';
 
-export default class NavBar extends Component {
+
+class NavBar extends Component {
+    signOut = () => {
+        auth0Client.signOut();
+        this.props.history.replace('/');
+    };
     render() {
         return (
             <Navbar collapseOnSelect>
@@ -24,10 +30,23 @@ export default class NavBar extends Component {
                         <Link to="/home">Home</Link>
                         <Link to="/mytrips">My Trips</Link>
                         <Link to="/suggestion">Add New Trip Suggestion</Link>
-
+                        {/* Auth0 code for checking to see if user is logged in. If they are, display profile name and sign out button. If they are not, display sign in button. */}
+                        {
+                            !auth0Client.isAuthenticated() &&
+                            <button className="btn btn-dark" onClick={auth0Client.signIn}>Sign In</button>
+                        }
+                        {
+                            auth0Client.isAuthenticated() &&
+                            <div>
+                                <label className="mr-2 text-white">{auth0Client.getProfile().name}</label>
+                                <button className="btn btn-dark" onClick={() => { this.signOut() }}>Sign Out</button>
+                            </div>
+                        }
                     </Nav>
                 </Navbar.Collapse >
+
             </Navbar >
         )
     }
 }
+export default withRouter(NavBar)

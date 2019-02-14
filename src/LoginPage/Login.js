@@ -74,11 +74,11 @@ export default class Login extends Component {
               type="password"
             />
           </FormGroup>
-          <div>
+          {/* <div>
 
             <label>Remember Me</label>
             <input type="checkbox" id="checkbox" />
-          </div>
+          </div> */}
 
           <Button
             block

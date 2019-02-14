@@ -40,7 +40,7 @@ export default props => {
                                 }}
                             >
                                 Start New Group Trip
-        </Link>
+                            </Link>
                         </Button>
                     </div>
 
@@ -55,7 +55,7 @@ export default props => {
                                 }}
                             >
                                 Add Suggestion
-        </Link>
+                            </Link>
                         </Button>
                     </div>
                 </div>

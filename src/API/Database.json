@@ -17,6 +17,12 @@
       "email": "harpergwin@gmail.com",
       "password": "pass",
       "id": 3
+    },
+    {
+      "name": "Aubrie",
+      "email": "aubriemribolla@gmail.com",
+      "password": "aubrie",
+      "id": 4
     }
   ],
   "groups": [
@@ -193,6 +199,26 @@
       "userId": 1,
       "rank": 0,
       "id": 19
+    },
+    {
+      "name": "great wolf lodge",
+      "cost": "$300",
+      "description": "lots of kids",
+      "link": "https://www.greatwolf.com/",
+      "groupId": 12,
+      "userId": 1,
+      "rank": 0,
+      "id": 20
+    },
+    {
+      "name": "play with pals",
+      "cost": "0",
+      "description": "yay!",
+      "link": "https://www.dog.com/",
+      "groupId": 8,
+      "userId": 1,
+      "rank": 0,
+      "id": 21
     }
   ]
 }

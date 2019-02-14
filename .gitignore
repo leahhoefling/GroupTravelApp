@@ -19,3 +19,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# Auth0 Credentials
+/src/Auth0Variables.js
