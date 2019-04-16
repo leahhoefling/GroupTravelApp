@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Navbar, Nav, Image } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import "./NavBar.css"
 import auth0Client from '../Auth';
 

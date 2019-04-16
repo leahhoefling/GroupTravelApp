@@ -1,3 +1,5 @@
+import auth0Client from '../Auth';
+
 const ApiManager = Object.create(
     {},
     {
@@ -11,10 +13,12 @@ const ApiManager = Object.create(
         getIdofCurrentUser: {
             value: () => {
 
-                const databaseString = localStorage.getItem("credentials")
-                const currentUserObject = JSON.parse(databaseString)
-                console.log("User stuff", currentUserObject)
-                return currentUserObject.user
+                // const databaseString = localStorage.getItem("credentials")
+                // const currentUserObject = JSON.parse(databaseString)
+                // console.log("User stuff", currentUserObject)
+                // return currentUserObject.user
+                const user = auth0Client.getProfile().email;
+                return user;
             }
         },
         //this api request gets the trips the user has made

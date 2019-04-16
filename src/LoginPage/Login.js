@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import ApiManager from "../API/ApiManager";
-import $ from 'jquery';
 
 
 export default class Login extends Component {
@@ -31,7 +30,7 @@ export default class Login extends Component {
 
     ApiManager.getAll(`users?email=${this.state.email}`)
       .then(user => {
-        if (user.length > 0 && this.state.password == user[0].password) {
+        if (user.length > 0 && this.state.password === user[0].password) {
           localStorage.setItem(
             "credentials",
             JSON.stringify({

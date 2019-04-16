@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import PropTypes from "prop-types"
-import { Button, Panel } from "react-bootstrap";
-import ApiManager from "../API/ApiManager";
+import { Button } from "react-bootstrap";
 import { Component } from "react";
 import "./MyTrips.css"
 

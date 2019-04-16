@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel, MenuItem, DropdownButton, ButtonToolbar } from "react-bootstrap";
 import ApiManager from "../API/ApiManager";
 import "./SuggestionForm.css";
-import MyTripsCards from "../MyTripsPage/MyTripsCards";
-import { Link } from "react-router-dom";
+
 
 
 

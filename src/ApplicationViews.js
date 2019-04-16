@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Login from "./LoginPage/Login";
 import WelcomePage from "./LoginPage/WelcomePage";
-import ApiManager from "./API/ApiManager";
+//import ApiManager from "./API/ApiManager";
 import Register from "./LoginPage/Register";
 import Home from "./Home/HomeDashboard";
 import SuggestionForm from "./SuggestionForm/SuggestionForm";
@@ -10,7 +10,7 @@ import ItineraryList from "./Itinerary/ItineraryList";
 import AddGroupTrip from "./AddTripGroup/AddGroupForm";
 import Callback from "./Callback"
 import auth0Client from './Auth';
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 
 
@@ -35,7 +35,8 @@ export default class ApplicationViews extends Component {
             }
           }} />
         <Route exact path="/login" render={props => {
-          if (auth0Client.isAuthenticated()) { return (< Login />) } else {
+          if (auth0Client.isAuthenticated()) { return (< Login />) }
+          else {
             auth0Client.signIn();
             return <div></div>;
           }

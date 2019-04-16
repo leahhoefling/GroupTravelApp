@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import MyTripsCards from "./MyTripsCards";
 import ApiManager from "../API/ApiManager";
 import "./MyTrips.css"

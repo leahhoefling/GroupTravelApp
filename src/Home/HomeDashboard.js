@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import { Image, Col, Button } from "react-bootstrap";
-import SuggestionForm from "../SuggestionForm/SuggestionForm";
+import { Image, Button } from "react-bootstrap";
 
 
 

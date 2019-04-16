@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import ItineraryCards from "./ItineraryCards";
 import ApiManager from "../API/ApiManager";
 import "./Itinerary.css"
@@ -27,10 +26,10 @@ export default class ItineraryList extends Component {
 
     handleClick = (rank, id, argument) => {
         const editedUpSuggestion = {
-            rank: parseInt(rank) + 1
+            rank: Number(rank) + 1
         };
         const editedDownSuggestion = {
-            rank: parseInt(rank) - 1
+            rank: Number(rank) - 1
         };
         let groupId = this.props.location.state.id;
 
