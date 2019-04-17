@@ -4,25 +4,19 @@
       "name": "Leah",
       "email": "leahgwin@gmail.com",
       "password": "pass",
-      "id": 1
+      "id": "leahgwin@gmail.com"
     },
     {
       "name": "Benjamin",
       "email": "benjamin@eventbrite.com",
       "password": "pass",
-      "id": 2
+      "id": "benjamin@eventbrite.com"
     },
     {
       "name": "Harper",
       "email": "harpergwin@gmail.com",
       "password": "pass",
-      "id": 3
-    },
-    {
-      "name": "Aubrie",
-      "email": "aubriemribolla@gmail.com",
-      "password": "aubrie",
-      "id": 4
+      "id": "harpergwin@gmail.com"
     }
   ],
   "groups": [
@@ -30,42 +24,35 @@
       "name": "Cohort 26 - Disney",
       "startDate": "2018-07-28",
       "endDate": "2018-09-14",
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "id": 7
     },
     {
       "name": "harper's trip to dog park!!!",
       "startDate": "2018-08-24",
       "endDate": "2018-08-24",
-      "userId": 3,
+      "userId": "harpergwin@gmail.com",
       "id": 8
     },
     {
       "name": "Hoefling Trip- Cape Town",
       "startDate": "2018-11-13",
       "endDate": "2018-11-30",
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "id": 9
     },
     {
-      "name": "Benjamin's Bachelor Party- 30A, FL",
+      "name": "Benjamin's Friend Trip- 30A, FL",
       "startDate": "2018-08-30",
       "endDate": "2018-09-03",
-      "userId": 2,
+      "userId": "benjamin@eventbrite.com",
       "id": 10
-    },
-    {
-      "name": "Best Friends Reunion- Greece",
-      "startDate": "2018-08-17",
-      "endDate": "2018-08-19",
-      "userId": 4,
-      "id": 11
     },
     {
       "name": "Holding Reunion- Georgia",
       "startDate": "2018-10-05",
       "endDate": "2018-10-07",
-      "userId": 2,
+      "userId": "benjamin@eventbrite.com",
       "id": 12
     }
   ],
@@ -75,7 +62,7 @@
       "cost": "$0",
       "description": "We will get to hike one of the New 7 Wonders of Nature to see a great view of Cape Town.",
       "link": "https://hiketablemountain.co.za/",
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "groupId": 9,
       "rank": 2,
       "id": 1
@@ -85,7 +72,7 @@
       "cost": "$119",
       "description": "We will get to go to Gaansbai to dive with Great White Sharks to see them upclose!",
       "link": "http://sharklady.co.za/",
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "groupId": 9,
       "rank": 4,
       "id": 2
@@ -95,7 +82,7 @@
       "cost": "$67",
       "description": "We get to snorkel with hundreds of seals of Cape Town's coast!",
       "link": "http://sealsnorkeling.com/",
-      "userId": 2,
+      "userId": "benjamin@eventbrite.com",
       "groupId": 9,
       "rank": 3,
       "id": 3
@@ -105,7 +92,7 @@
       "cost": "$30",
       "description": "It is like snowboarding... but on a sand dune!",
       "link": "http://sandboardingcapetown.com/",
-      "userId": 2,
+      "userId": "benjamin@eventbrite.com",
       "rank": 0,
       "groupId": 9,
       "id": 7
@@ -115,7 +102,7 @@
       "cost": "$0",
       "description": "Make friends and play with them",
       "link": "n/a",
-      "userId": 3,
+      "userId": "harpergwin@gmail.com",
       "rank": 0,
       "id": 8,
       "groupId": 8
@@ -126,7 +113,7 @@
       "description": "Sisterhood of the Traveling Pants did it... and so should we!",
       "link": "http://www.blog.visitgreece.gr/a-daredevils-guide-to-hiking-cliff-jumping-in-santorini/",
       "groupId": 11,
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "rank": 2,
       "id": 11
     },
@@ -136,7 +123,7 @@
       "description": "The Cave of Nikolas restaurant in Santorini has amazing, fresh seafood.",
       "link": "http://www.nikolascave.gr/en/",
       "groupId": 11,
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "rank": 2,
       "id": 12
     },
@@ -146,19 +133,9 @@
       "description": "gonna be fun!",
       "link": "https://www.blackwatertubing.net/",
       "groupId": 9,
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "rank": 1,
       "id": 13
-    },
-    {
-      "name": "Watch Sunset from Oia",
-      "cost": "$0",
-      "description": "The Sun sets around 8pm when we're there!",
-      "link": "https://www.tripadvisor.com/Attraction_Review-g482941-d3369820-Reviews-Sunset_in_Oia-Oia_Santorini_Cyclades_South_Aegean.html",
-      "groupId": 11,
-      "userId": 4,
-      "rank": -1,
-      "id": 14
     },
     {
       "name": "Visit Wineries",
@@ -166,7 +143,7 @@
       "description": "The wineries have tastings and charcuterie boards for us!",
       "link": "https://www.santowines.gr/en/",
       "groupId": 11,
-      "userId": 4,
+      "userId": "harpergwin@gmail.com",
       "rank": 1,
       "id": 15
     },
@@ -176,7 +153,7 @@
       "description": "We can rent ATVs and ride them to the beaches across the island.",
       "link": "https://www.santorinibikerental.com/",
       "groupId": 11,
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "rank": -1,
       "id": 16
     },
@@ -186,7 +163,7 @@
       "description": "scary af",
       "link": "",
       "groupId": 7,
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "rank": 0,
       "id": 18
     },
@@ -196,7 +173,7 @@
       "description": "calm classic ride",
       "link": "",
       "groupId": 7,
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "rank": 0,
       "id": 19
     },
@@ -206,7 +183,7 @@
       "description": "lots of kids",
       "link": "https://www.greatwolf.com/",
       "groupId": 12,
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "rank": 0,
       "id": 20
     },
@@ -216,7 +193,7 @@
       "description": "yay!",
       "link": "https://www.dog.com/",
       "groupId": 8,
-      "userId": 1,
+      "userId": "leahgwin@gmail.com",
       "rank": 0,
       "id": 21
     }
