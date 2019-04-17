@@ -23,16 +23,16 @@ const ApiManager = Object.create(
         },
         //this api request gets the trips the user has made
         getUserTrip: {
-            value: (collectionName, id) => {
-                return fetch(`http://localhost:5002/${collectionName}?userId=${id}`).then(e =>
+            value: (collectionName, user) => {
+                return fetch(`http://localhost:5002/${collectionName}?userId=${user}`).then(e =>
                     e.json()
                 );
             }
         },
         //this api request gets the trips the user has made suggestions to
         getUserSuggestionTrip: {
-            value: (id) => {
-                return fetch(`http://localhost:5002/suggestions?userId=${id}&_expand=group`).then(e =>
+            value: (user) => {
+                return fetch(`http://localhost:5002/suggestions?userId=${user}&_expand=group`).then(e =>
                     e.json()
                 );
             }
